@@ -1,0 +1,45 @@
+# robots.txt — Telvin Varfley · telvins-domain
+# https://hakztv.github.io/telvins-domain/
+#
+# Software engineer & Azure architect based in Accra, Ghana.
+# Cloud-native products · Front-end architecture · Problem solver.
+
+# ── Allow all well-behaved crawlers ──────────────────────────────────────────
+User-agent: *
+Allow: /
+
+# Let crawlers index the OG card and favicon for rich results
+Allow: /images/og-card.svg
+Allow: /favicon.svg
+
+# No system/internals — keep crawl budget on content pages
+Disallow: /images/tee-avatar.png
+Disallow: /images/telvin.jpeg
+
+# ── Google ────────────────────────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# ── Bing ──────────────────────────────────────────────────────────────────────
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# ── LinkedIn preview crawler ───────────────────────────────────────────────────
+User-agent: LinkedInBot
+Allow: /
+Allow: /images/og-card.svg
+
+# ── Twitter/X card crawler ────────────────────────────────────────────────────
+User-agent: Twitterbot
+Allow: /
+Allow: /images/og-card.svg
+
+# ── Facebook / WhatsApp OG crawler ───────────────────────────────────────────
+User-agent: facebookexternalhit
+Allow: /
+Allow: /images/og-card.svg
+
+# ── Sitemap ───────────────────────────────────────────────────────────────────
+Sitemap: https://hakztv.github.io/telvins-domain/sitemap.xml

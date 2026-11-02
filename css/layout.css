@@ -9,7 +9,7 @@ nav {
   left: 0;
   right: 0;
   z-index: 20;
-  padding: calc(14px + env(safe-area-inset-top, 0px)) 24px 14px;
+  padding: calc(14px + env(safe-area-inset-top, 0px)) clamp(28px, 6vw, 96px) 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -234,7 +234,7 @@ nav.top .links {
     inset: 0;
     z-index: 19;
     overflow-y: auto;
-    padding: calc(92px + env(safe-area-inset-top, 0px)) 24px calc(28px + env(safe-area-inset-bottom, 0px));
+    padding: calc(92px + env(safe-area-inset-top, 0px)) clamp(28px, 6vw, 96px) calc(28px + env(safe-area-inset-bottom, 0px));
     background: rgba(11, 11, 12, .97);
     backdrop-filter: blur(18px);
     opacity: 0;
