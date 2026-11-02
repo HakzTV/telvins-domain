@@ -192,6 +192,10 @@
 
     <div class="hx-pipe hx-rise" style="--d:.65" aria-label="From wireframe to production monitoring">
       <span class="hx-fill"></span>
+      <svg class="hx-snake-svg" viewBox="0 0 280 72" fill="none" aria-hidden="true">
+        <path class="hx-snake-base" d="M 12,12 L 244,12 A 24,24 0 0 1 244,60 L 12,60" stroke="var(--line)" stroke-width="2" stroke-linecap="round"/>
+        <path class="hx-snake-glow" d="M 12,12 L 244,12 A 24,24 0 0 1 244,60 L 12,60" stroke="var(--ember)" stroke-width="2" stroke-linecap="round"/>
+      </svg>
       <div class="hx-nd" style="--i:0"><i></i><span>Wireframe</span></div>
       <div class="hx-nd" style="--i:1"><i></i><span>Build</span></div>
       <div class="hx-nd" style="--i:2"><i></i><span>Ship</span></div>
@@ -408,12 +412,57 @@
       <div class="mono">● Certifications</div>
       <h2 class="h2">Five certs.<br><span class="a">One path.</span></h2>
       <p class="lede rv" style="max-width:720px;margin-top:30px">Fundamentals, administration, architecture, DevOps, then a specialty. Each one maps to work I do for clients.</p>
-      <div style="margin-top:50px">
-        <div class="row rv"><span class="mono">AZ-900 · 01</span><div><h3 style="margin:0 0 6px;font-size:clamp(24px,3.4vw,40px);letter-spacing:-.03em;font-weight:500">Azure Fundamentals</h3><p style="margin:0;color:#b3b3ba">Core cloud concepts and Azure services. The shared language of every cloud conversation.</p></div></div>
-        <div class="row rv"><span class="mono">AZ-104 · 02</span><div><h3 style="margin:0 0 6px;font-size:clamp(24px,3.4vw,40px);letter-spacing:-.03em;font-weight:500">Azure Administrator Associate</h3><p style="margin:0;color:#b3b3ba">Running Azure day to day: identity, networking, storage, compute and monitoring.</p></div></div>
-        <div class="row rv"><span class="mono">AZ-305 · 03</span><div><h3 style="margin:0 0 6px;font-size:clamp(24px,3.4vw,40px);letter-spacing:-.03em;font-weight:500">Azure Solutions Architect Expert</h3><p style="margin:0;color:#b3b3ba">Designing Azure solutions around security, resilience and cost. Applied in the WordPress on Azure project.</p></div></div>
-        <div class="row rv"><span class="mono">AZ-400 · 04</span><div><h3 style="margin:0 0 6px;font-size:clamp(24px,3.4vw,40px);letter-spacing:-.03em;font-weight:500">DevOps Engineer Expert</h3><p style="margin:0;color:#b3b3ba">Delivery pipelines, infrastructure as code and release strategy. Applied daily with Azure DevOps and Bicep.</p></div></div>
-        <div class="row rv"><span class="mono">AZ-140 · 05</span><div><h3 style="margin:0 0 6px;font-size:clamp(24px,3.4vw,40px);letter-spacing:-.03em;font-weight:500">Azure Virtual Desktop Specialty</h3><p style="margin:0;color:#b3b3ba">Deploying and managing virtual desktops on Azure.</p></div></div>
+      <div class="cert-list" style="margin-top:50px">
+        <div class="cert-row rv">
+          <div class="cert-badge">
+            <img src="images/certs/az-900.png" alt="Microsoft Certified: Azure Fundamentals badge" width="80" height="80" loading="lazy">
+          </div>
+          <div class="cert-info">
+            <span class="mono">AZ-900 · 01</span>
+            <h3>Azure Fundamentals</h3>
+            <p>Core cloud concepts and Azure services. The shared language of every cloud conversation.</p>
+          </div>
+        </div>
+        <div class="cert-row rv">
+          <div class="cert-badge">
+            <img src="images/certs/az-104.png" alt="Microsoft Certified: Azure Administrator Associate badge" width="80" height="80" loading="lazy">
+          </div>
+          <div class="cert-info">
+            <span class="mono">AZ-104 · 02</span>
+            <h3>Azure Administrator Associate</h3>
+            <p>Running Azure day to day: identity, networking, storage, compute and monitoring.</p>
+          </div>
+        </div>
+        <div class="cert-row rv">
+          <div class="cert-badge">
+            <img src="images/certs/az-305.png" alt="Microsoft Certified: Azure Solutions Architect Expert badge" width="80" height="80" loading="lazy">
+          </div>
+          <div class="cert-info">
+            <span class="mono">AZ-305 · 03</span>
+            <h3>Azure Solutions Architect Expert</h3>
+            <p>Designing Azure solutions around security, resilience and cost. Applied in the WordPress on Azure project.</p>
+          </div>
+        </div>
+        <div class="cert-row rv">
+          <div class="cert-badge">
+            <img src="images/certs/az-400.png" alt="Microsoft Certified: DevOps Engineer Expert badge" width="80" height="80" loading="lazy">
+          </div>
+          <div class="cert-info">
+            <span class="mono">AZ-400 · 04</span>
+            <h3>DevOps Engineer Expert</h3>
+            <p>Delivery pipelines, infrastructure as code and release strategy. Applied daily with Azure DevOps and Bicep.</p>
+          </div>
+        </div>
+        <div class="cert-row rv">
+          <div class="cert-badge">
+            <img src="images/certs/az-140.png" alt="Microsoft Certified: Azure Virtual Desktop Specialty badge" width="80" height="80" loading="lazy">
+          </div>
+          <div class="cert-info">
+            <span class="mono">AZ-140 · 05</span>
+            <h3>Azure Virtual Desktop Specialty</h3>
+            <p>Deploying and managing virtual desktops on Azure.</p>
+          </div>
+        </div>
       </div>
       <div class="cta rv" style="margin-top:60px">
         <span class="mono">● Need this applied to your cloud?</span>
