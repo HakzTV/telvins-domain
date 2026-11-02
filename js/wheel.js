@@ -1,6 +1,6 @@
 /**
  * Values Orbit Wheel
- * Generates and animates the rotating wheel of values, synced to page scroll.
+ * Generates and animates the rotating wheel of values, synced to page scroll and clickable cards.
  */
 (function() {
   var wheel = document.getElementById('wheel');
@@ -18,6 +18,9 @@
       cap = document.getElementById('vcap'),
       cards = [],
       cur = 0,
+      offset = 0,
+      targetVal = null,
+      reducedMotion = window.matchMedia('(prefers-reduced-motion:reduce)').matches,
       home = document.getElementById('home');
 
   function setVal(v) {
@@ -30,14 +33,56 @@
     cap.classList.add('vin');
   }
 
+  function selectCard(d) {
+    var cardA = +d.getAttribute('data-a');
+    // Calculate shortest angular distance from the apex (top center)
+    var a = ((((cardA + cur) % 360) + 540) % 360) - 180;
+    var targetRotation = cur - a;
+    offset = targetRotation - (-window.scrollY * 0.045);
+    targetVal = +d.getAttribute('data-v');
+    setVal(targetVal);
+
+    if (reducedMotion) {
+      cur = targetRotation;
+      draw();
+    }
+  }
+
+  // Clear targeted lock when user manually scrolls or touches
+  window.addEventListener('wheel', function() {
+    targetVal = null;
+  }, { passive: true });
+
+  window.addEventListener('touchmove', function() {
+    targetVal = null;
+  }, { passive: true });
+
   for (var i = 0; i < 15; i++) {
     var v = (i + 3) % 5,
         c = vals[v],
         d = document.createElement('div');
     d.className = 'oc';
+    d.setAttribute('role', 'button');
+    d.setAttribute('tabindex', '0');
+    d.setAttribute('aria-label', c[0] + ' - ' + c[1]);
     d.innerHTML = c[0] + '<small>' + c[1] + '</small>';
     d.setAttribute('data-v', v);
     d.setAttribute('data-a', i * 24 - 48);
+    d.style.setProperty('--a', (i * 24 - 48) + 'deg');
+
+    (function(cardEl) {
+      cardEl.addEventListener('click', function(e) {
+        e.stopPropagation();
+        selectCard(cardEl);
+      });
+      cardEl.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          selectCard(cardEl);
+        }
+      });
+    })(d);
+
     wheel.appendChild(d);
     cards.push(d);
   }
@@ -46,23 +91,35 @@
     wheel.style.transform = 'rotate(' + cur + 'deg)';
     cards.forEach(function(d) {
       var a = ((((+d.getAttribute('data-a')) + cur) % 360) + 540) % 360 - 180;
-      d.style.setProperty('--a', (+d.getAttribute('data-a')) + 'deg');
       var h = Math.abs(a) < 12;
       d.classList.toggle('hot', h);
-      if (h) setVal(+d.getAttribute('data-v'));
+      if (h) {
+        var v = +d.getAttribute('data-v');
+        if (targetVal !== null) {
+          if (v === targetVal) {
+            targetVal = null;
+          }
+        } else {
+          setVal(v);
+        }
+      }
     });
   }
 
   function tick() {
     if (home && home.classList.contains('on')) {
-      cur += (-window.scrollY * .045 - cur) * .08;
+      var scrollTarget = -window.scrollY * 0.045 + offset;
+      cur += (scrollTarget - cur) * 0.08;
+      if (Math.abs(scrollTarget - cur) < 0.2) {
+        targetVal = null;
+      }
       draw();
     }
     requestAnimationFrame(tick);
   }
 
   draw();
-  if (!window.matchMedia('(prefers-reduced-motion:reduce)').matches) {
+  if (!reducedMotion) {
     requestAnimationFrame(tick);
   }
 })();

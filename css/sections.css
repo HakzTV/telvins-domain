@@ -128,7 +128,28 @@
   transform-origin: calc(var(--cw) / 2) calc(var(--R) + var(--ch) / 2);
   font: 600 17px/1.15 var(--sans);
   padding: 10px;
-  transition: background .5s var(--ease), color .5s var(--ease), border-color .5s var(--ease);
+  transition: background .5s var(--ease), color .5s var(--ease), border-color .5s var(--ease), filter .2s var(--ease);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.oc * {
+  pointer-events: none;
+}
+
+.oc:hover:not(.hot) {
+  border-color: rgba(255, 90, 31, .45);
+  background: linear-gradient(160deg, #222226, #161619);
+}
+
+.oc:active {
+  filter: brightness(1.15);
+}
+
+.oc:focus-visible {
+  outline: 2px solid var(--ember);
+  outline-offset: 3px;
 }
 
 .oc small {
