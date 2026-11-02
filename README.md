@@ -2,7 +2,7 @@
 
 > Cloud-native software engineer & Azure architect based in Accra, Ghana.
 
-Live site: [telvins-domain](https://hakztv.github.io/telvins-domain) *(or your custom domain once set)*
+Live site: [telvins-domain](https://telvinvarfley.com/)
 
 ---
 
@@ -47,25 +47,6 @@ Tokens live in `css/variables.css`:
 | `--ink` | `#0b0b0c` | Page background |
 | `--line` | `#2a2a2e` | Borders, dividers |
 | `--fg` | `#f4f3f0` | Primary text |
-
----
-
-## Local Development
-
-No build step required — open with [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) or any static file server:
-
-```bash
-# Python 3
-python -m http.server 5500
-```
-
-Then visit `http://127.0.0.1:5500`.
-
----
-
-## Contact Form
-
-Form submissions go through [Formspree](https://formspree.io/f/xgaapvor). No server required.
 
 ---
 
