@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Animations, Reveal Effects, Cursor Spotlight & Accessibility
+   ========================================================================== */
+
+/* --- Splash Screen --- */
+#splash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #000;
+}
+
+html.sp, html.sp body {
+  overflow: hidden;
+}
+
+@keyframes in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+.rv {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: .8s var(--ease);
+}
+
+.rv.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* --- GSAP Micro-Animations --- */
+html.gs .view.on {
+  animation: none;
+}
+
+.w {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  padding: .1em .06em .16em 0;
+  margin: -.1em -.06em -.16em 0;
+}
+
+.wi {
+  display: inline-block;
+  will-change: transform;
+}
+
+/* --- Trailing Cursor Spotlight --- */
+.cg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 420px;
+  height: 420px;
+  margin: -210px 0 0 -210px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 6;
+  opacity: 0;
+  transition: opacity .45s var(--ease);
+  will-change: transform;
+}
+
+.cg.d {
+  background: radial-gradient(circle, rgba(255, 90, 31, .26) 0%, rgba(255, 90, 31, .11) 38%, rgba(255, 90, 31, 0) 68%);
+  mix-blend-mode: screen;
+}
+
+.cg.l {
+  width: 340px;
+  height: 340px;
+  margin: -170px 0 0 -170px;
+  background: radial-gradient(circle, rgba(226, 74, 18, 1) 0%, rgba(226, 74, 18, .5) 30%, rgba(226, 74, 18, 0) 66%);
+  mix-blend-mode: multiply;
+}
+
+.cg.k {
+  width: 380px;
+  height: 380px;
+  margin: -190px 0 0 -190px;
+  background: radial-gradient(circle, rgba(11, 11, 12, .6) 0%, rgba(11, 11, 12, .28) 38%, rgba(11, 11, 12, 0) 68%);
+  mix-blend-mode: multiply;
+}
+
+.cg.on {
+  opacity: 1;
+}
+
+@media(hover: none), (pointer: coarse) {
+  .cg {
+    display: none;
+  }
+}
+
+/* --- Reduced Motion Preferences --- */
+@media(prefers-reduced-motion: reduce) {
+  #splash {
+    display: none;
+  }
+  html.sp, html.sp body {
+    overflow: auto;
+  }
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  .rv {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Telvin Varfley · Software Engineer &amp; Azure Architect</title>
+  
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  
+  <!-- Modular Styles -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- Splash Screen -->
+  <div id="splash" aria-hidden="true"></div>
+  <noscript><style>#splash{display:none}html.sp,html.sp body{overflow:auto}</style></noscript>
+  <script>
+    document.documentElement.classList.add('sp');
+    setTimeout(function(){
+      var s = document.getElementById('splash');
+      if (s && s.parentNode) s.parentNode.removeChild(s);
+      document.documentElement.classList.remove('sp');
+      if (window.gsap) gsap.globalTimeline.resume();
+    }, 9000);
+  </script>
+
+  <!-- Top Navigation Bar -->
+  <nav>
+    <a class="logo c3" href="#home" aria-label="Telvin Varfley, home">
+      <span class="wm" aria-hidden="true"><span class="wt">tv<span class="d"></span></span></span>
+      <span class="rl" aria-hidden="true"></span>
+      <span class="nm">Telvin Varfley</span>
+    </a>
+    <div class="links" id="links">
+      <a href="#home">Home</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#certs">Certs</a>
+      <a href="#system">System</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Navigation Menu -->
+  <div id="menu" role="dialog" aria-label="Menu" aria-hidden="true">
+    <div class="mn">
+      <a href="#home"><span class="mono">01</span>Home<em aria-hidden="true">→</em></a>
+      <a href="#work"><span class="mono">02</span>Work<em aria-hidden="true">→</em></a>
+      <a href="#about"><span class="mono">03</span>About<em aria-hidden="true">→</em></a>
+      <a href="#expertise"><span class="mono">04</span>Expertise<em aria-hidden="true">→</em></a>
+      <a href="#certs"><span class="mono">05</span>Certs<em aria-hidden="true">→</em></a>
+      <a href="#system"><span class="mono">06</span>System<em aria-hidden="true">→</em></a>
+      <a href="#contact"><span class="mono">07</span>Contact<em aria-hidden="true">→</em></a>
+    </div>
+    <div class="mf">
+      <span class="mono">Software engineer · Azure architect</span>
+      <span class="mono">Accra, Ghana</span>
+    </div>
+  </div>
+
+  <!-- VIEW: HOME -->
+  <main class="view" id="home">
+    <section class="hero">
+      <div class="glow"></div>
+      <div class="wrap">
+  <div class="hero-arch-stage">
+  <div class="hero-main">
+    <span class="tag mono hx-rise" style="--d:.05"><i class="dot"></i>Open to consulting &amp; product work</span>
+    <h1>
+      <span class="hx-w hx-rise" style="--d:.15">Telvin</span>
+      <span class="hx-w hx-rise" style="--d:.3">Varfley</span>
+    </h1>
+    <div class="mono hx-rise" style="--d:.45">Software Engineer · Azure Architect · Accra, Ghana</div>
+    <p class="lede hx-rise" style="--d:.55">I build cloud-native software that real teams <em>actually adopt</em>.</p>
+
+    <div class="hx-pipe hx-rise" style="--d:.65" aria-label="From wireframe to production monitoring">
+      <span class="hx-fill"></span>
+      <div class="hx-nd" style="--i:0"><i></i><span>Wireframe</span></div>
+      <div class="hx-nd" style="--i:1"><i></i><span>Build</span></div>
+      <div class="hx-nd" style="--i:2"><i></i><span>Ship</span></div>
+      <div class="hx-nd" style="--i:3"><i></i><span>Monitor</span></div>
+    </div>
+
+    <div class="hero-cta hx-rise" style="--d:.75">
+      <a class="btn" href="#work"><b>→</b>See my work</a>
+      <a class="btn ghost" href="#contact"><b>↗</b>Contact me</a>
+    </div>
+  </div>
+
+  <div class="hero-aw" aria-label="Telvin Varfley portrait">
+    <div class="hx-halo" aria-hidden="true"></div>
+    <div class="hero-arch">
+      <img src="images/tee-avatar.png?v=8" alt="Telvin Varfley · Software Engineer &amp; Azure Architect" width="1254" height="1254" loading="eager">
+    </div>
+    <div class="hero-ring" aria-hidden="true"></div>
+    <svg class="hx-rsvg" viewBox="0 0 100 133" preserveAspectRatio="none" aria-hidden="true">
+      <path pathLength="100" d="M0 128V50A50 50 0 0 1 100 50V128Q100 133 95 133H5Q0 133 0 128Z"/>
+    </svg>
+    <div class="hx-live mono"><i class="dot"></i>In production</div>
+    <div class="chip chip-tl"><i></i><span>Accra, Ghana</span></div>
+    <div class="chip chip-mr"><i></i><span>Azure Architect</span></div>
+    <div class="chip chip-bl"><i></i><span>Full-stack</span></div>
+  </div>
+</div>
+        <div class="orbit" aria-label="My values"><div class="wheel" id="wheel"></div></div>
+        <div class="vcap" id="vcap" aria-live="polite"></div>
+        <div class="proof">
+          <div><b>30<i>%</i></b><span class="mono">team productivity gain</span></div>
+          <div><b>40<i>%</i></b><span class="mono">faster load times</span></div>
+          <div><b>28<i>%</i></b><span class="mono">lower bounce rate</span></div>
+          <div><b>50<i>+</i></b><span class="mono">users trained</span></div>
+          <div><b>9</b><span class="mono">countries delivered</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="paper">
+      <div class="wrap">
+        <div class="mono">● Manifesto</div>
+        <h2 class="h2 rv">Interface.<br>Infrastructure.<br><span class="a">Adoption.</span></h2>
+        <div class="disc">
+          <a href="#expertise"><span class="mono">01</span><h3>Front-end architecture</h3><p>React, TypeScript, SPFx. Fast, accessible, human-centred.</p></a>
+          <a href="#expertise"><span class="mono">02</span><h3>Back-end &amp; data</h3><p>Azure SQL, PostgreSQL, MongoDB.</p></a>
+          <a href="#expertise"><span class="mono">03</span><h3>Cloud &amp; DevOps</h3><p>Azure, GCP, Bicep IaC, CI/CD pipelines.</p></a>
+          <a href="#expertise"><span class="mono">04</span><h3>SaaS product building</h3><p>Multi-tenant, role-based, offline-first.</p></a>
+          <a href="#expertise"><span class="mono">05</span><h3>Enablement &amp; delivery</h3><p>Bridging technical design and non-technical teams.</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="wrap">
+        <div class="mono">● The arc</div>
+        <h2 class="h2 rv">From pixels to <span class="a">platforms.</span></h2>
+        <div style="margin-top:60px">
+          <div class="chap rv"><span class="mono">2019 to 2023</span><div><h3>Learn the fundamentals</h3><p>BSc Information Technology at BluCrest College. Architecture, algorithms and computability. The base under everything built since.</p></div></div>
+          <div class="chap rv"><span class="mono">Jun to Dec 2023</span><div><h3>Own the interface</h3><p>Front-End Developer at Advertising &amp; Publisher Solutions Ghana. Rebuilt product UIs: bounce rate down 28%, load times down 40%, engagement up 32%, UI bugs down 35%.</p></div></div>
+          <div class="chap rv"><span class="mono">2024 to Now</span><div><h3>Architect the system</h3><p>Technical Consultant at eSolutions Consulting. Front-end architecture, Azure DevOps pipelines and Bicep infrastructure, Power Platform automation that lifted team productivity by 30%.</p></div></div>
+          <div class="chap rv"><span class="mono">Now</span><div><h3>Build the products</h3><p>Wikora and WeTrack: live products, one with a paying client, built on what enterprise work taught me.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" style="padding-top:0">
+      <div class="wrap">
+        <div class="mono">● Selected work</div>
+        <div class="grid3">
+          <a class="card rv" href="#work"><div class="art" data-k="WIKORA"></div><h3>Wikora</h3><p>Multi-tenant, offline-first knowledge management SaaS.</p><div class="chips"><span>React</span><span>Firebase</span><span>TanStack</span></div></a>
+          <a class="card hot rv" href="#work"><div class="art" data-k="WETRACK" style="filter:grayscale(1) contrast(1.2)"></div><h3>WeTrack</h3><p>Income and expense tracking with receipts sent by email or WhatsApp. My first product with a paying client.</p><div class="chips"><span style="border-color:#000;color:#000">Income &amp; expenses</span><span style="border-color:#000;color:#000">Receipts</span></div></a>
+          <a class="card rv" href="#work"><div class="art" data-k="AZURE IAC"></div><h3>WordPress on Azure</h3><p>Highly available hosting, fully automated through Bicep.</p><div class="chips"><span>Bicep</span><span>Key Vault</span><span>Actions</span></div></a>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="cta rv">
+        <span class="mono">● Let’s work together</span>
+        <h2>Let’s build something<br><span class="a">that ships.</span></h2>
+        <a class="btn" href="#contact"><b>↗</b>Contact me</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- VIEW: WORK -->
+  <main class="view" id="work">
+    <div class="wrap">
+      <div class="mono">● Selected work</div>
+      <h2 class="h2">Problems solved,<br><span class="a">not screens shipped.</span></h2>
+      <div style="margin-top:70px">
+        <article class="case rv">
+          <div>
+            <span class="mono">01 · SaaS · Live product</span>
+            <h2>Wikora</h2>
+            <div class="chips"><span>React</span><span>TypeScript</span><span>Vite</span><span>Firebase Auth</span><span>Firestore</span><span>TanStack Query</span></div>
+            <p style="margin-top:20px"><a class="btn" href="https://www.wikora.online/" target="_blank" rel="noopener"><b>↗</b>View live product</a></p>
+          </div>
+          <dl>
+            <div><dt class="mono">Problem</dt><dd>Organisations keep internal knowledge scattered, unversioned and loosely controlled.</dd></div>
+            <div><dt class="mono">Build</dt><dd>A multi-tenant knowledge platform with role-based access, organisation-scoped data isolation, invitations and access revocation. Offline-first reads and edits with optimistic updates and automatic sync.</dd></div>
+            <div><dt class="mono">Outcome</dt><dd>One centralised, versioned source of truth, with domain models designed for analytics and AI-assisted retrieval.</dd></div>
+          </dl>
+        </article>
+
+        <article class="case rv">
+          <div>
+            <span class="mono">02 · PWA · First paying client</span>
+            <h2>WeTrack</h2>
+            <div class="chips"><span>PWA</span><span>Income &amp; expenses</span><span>Email receipts</span><span>WhatsApp receipts</span></div>
+            <p style="margin-top:20px"><a class="btn" href="https://expensetracker-67f1d.web.app/login" target="_blank" rel="noopener"><b>↗</b>Open WeTrack</a></p>
+          </div>
+          <dl>
+            <div><dt class="mono">Problem</dt><dd>Keeping income and expenses in order, and getting receipts to customers without friction.</dd></div>
+            <div><dt class="mono">Build</dt><dd>A progressive web app (PWA) that records income and expenses and sends receipts to customers by email or WhatsApp.</dd></div>
+            <div><dt class="mono">Outcome</dt><dd>Helps small businesses keep a proper history of money in and money out. Already used by a paying client.</dd></div>
+          </dl>
+        </article>
+
+        <article class="case rv">
+          <div>
+            <span class="mono">03 · Cloud · Infrastructure as code</span>
+            <h2>WordPress on Azure</h2>
+            <div class="chips"><span>Bicep</span><span>App Service</span><span>MySQL</span><span>Key Vault</span><span>Log Analytics</span><span>GitHub Actions</span></div>
+            <p style="margin-top:20px"><a class="btn" href="#"><b>↗</b>View on GitHub</a></p>
+          </div>
+          <dl>
+            <div><dt class="mono">Problem</dt><dd>Production hosting that is repeatable, observable and recoverable.</dd></div>
+            <div><dt class="mono">Build</dt><dd>Full-stack deployment automated with Bicep, Bash and GitHub Actions: custom domain, DNS, secrets in Key Vault, backups and monitoring.</dd></div>
+            <div><dt class="mono">Outcome</dt><dd>High-availability hosting with disaster recovery, redeployable from code.</dd></div>
+          </dl>
+        </article>
+
+        <article class="case rv">
+          <div>
+            <span class="mono">04 · Enterprise · eSolutions</span>
+            <h2>Client platforms</h2>
+            <div class="chips"><span>React</span><span>SPFx</span><span>Power Apps</span><span>Power Automate</span><span>Azure DevOps</span></div>
+          </div>
+          <dl>
+            <div><dt class="mono">Problem</dt><dd>Enterprise clients across Ghana, Kenya and the Ivory Coast needed reliable tools their teams would actually use.</dd></div>
+            <div><dt class="mono">Build</dt><dd>Front-end architecture, automation, and CI/CD with Bicep for App Service and Functions. Features owned from wireframe to production monitoring.</dd></div>
+            <div><dt class="mono">Outcome</dt><dd>30% internal productivity gain and 50+ users trained to adopt new platforms.</dd></div>
+          </dl>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- VIEW: ABOUT -->
+  <main class="view" id="about">
+    <div class="wrap">
+      <div class="mono">● About</div>
+      <h2 class="h2">Engineer who sits<br>between the code<br><span class="a">and the customer.</span></h2>
+      <div class="row rv" style="margin-top:70px">
+        <span class="mono">01 · The screen</span>
+        <div><p style="font-size:24px;line-height:1.35;letter-spacing:-.02em;margin:0 0 12px">I started where users start: the screen.</p><p style="color:#b3b3ba;margin:0">I was obsessed with how software feels, the small details that make an interface feel right.</p></div>
+      </div>
+      <div class="row rv">
+        <span class="mono">02 · The break</span>
+        <div><p style="font-size:24px;line-height:1.35;letter-spacing:-.02em;margin:0 0 12px">Then consulting showed me where good software fails.</p><p style="color:#b3b3ba;margin:0">Not in the code. In deployment, in access, and in whether the people it was built for ever used it.</p></div>
+      </div>
+      <div class="row rv">
+        <span class="mono">03 · The whole path</span>
+        <div><p style="font-size:24px;line-height:1.35;letter-spacing:-.02em;margin:0 0 12px">So I learned all of it.</p><p style="color:#b3b3ba;margin:0">I design the interface, wire the pipeline, provision the infrastructure and train the team who will use it. Same job, different layers. <a href="#certs" style="color:var(--ember)">See the certifications →</a></p></div>
+      </div>
+      <div class="row rv">
+        <span class="mono">Principles</span>
+        <div class="grid3" style="margin:0">
+          <div class="card"><h3>Ownership</h3><p>Wireframe to production monitoring. I stay with it.</p></div>
+          <div class="card"><h3>Small iterations</h3><p>Ship small, learn fast, compound.</p></div>
+          <div class="card hot"><h3>Adoption first</h3><p>If people don’t use it, it didn’t ship.</p></div>
+        </div>
+      </div>
+      <div class="row rv">
+        <span class="mono">Education</span>
+        <div>BSc Information Technology, BluCrest College · 2019 to 2023</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- VIEW: EXPERTISE -->
+  <main class="view" id="expertise">
+    <div class="wrap">
+      <div class="mono">● Expertise</div>
+      <h2 class="h2">One engineer.<br><span class="a">Many layers.</span></h2>
+      <div class="grid3">
+        <div class="card rv"><span class="mono">01</span><h3>Front-end</h3><ul><li>React &amp; TypeScript</li><li>SPFx &amp; SharePoint</li><li>TanStack Query</li><li>Figma to production</li></ul></div>
+        <div class="card rv"><span class="mono">02</span><h3>Back-end &amp; Data</h3><ul><li>Azure SQL</li><li>PostgreSQL</li><li>MongoDB</li><li>MERN stack APIs</li></ul></div>
+        <div class="card rv"><span class="mono">03</span><h3>Cloud &amp; DevOps</h3><ul><li>Azure &amp; Google Cloud</li><li>Bicep infrastructure as code</li><li>Azure DevOps &amp; GitHub Actions</li><li>Firebase</li></ul></div>
+        <div class="card rv"><span class="mono">04</span><h3>Platform &amp; Delivery</h3><ul><li>Power Apps &amp; Power Automate</li><li>Appwrite</li><li>Azure Boards &amp; Planner</li><li>Training 50+ users</li></ul></div>
+      </div>
+      <div class="mono" style="margin:80px 0 0">● Ways to work together</div>
+      <div class="grid3" style="margin-top:20px">
+        <div class="card rv"><span class="mono">Advise</span><h3>Cloud consulting</h3><p>Architecture review, Azure and GCP guidance, delivery pipelines.</p><a class="btn ghost" href="#contact"><b>↗</b>Contact me</a></div>
+        <div class="card hot rv"><span class="mono">Build</span><h3>Product engineering</h3><p>Front-end or full-stack SaaS, from wireframe to deployment.</p><a class="btn" style="background:#000;color:#fff" href="#contact"><b style="background:var(--ember);color:#000">↗</b>Contact me</a></div>
+        <div class="card rv"><span class="mono">Enable</span><h3>Adoption &amp; training</h3><p>Onboarding teams onto new platforms so they stick.</p><a class="btn ghost" href="#contact"><b>↗</b>Contact me</a></div>
+      </div>
+      <div class="mono" style="margin:80px 0 14px">● Certifications · <a href="#certs" style="color:var(--ember)">Full page →</a></div>
+      <div class="chips" style="padding-bottom:90px">
+        <span>DevOps Engineer Expert (AZ-400)</span>
+        <span>Azure Solutions Architect Expert (AZ-305)</span>
+        <span>Azure Administrator Associate (AZ-104)</span>
+        <span>Azure Virtual Desktop Specialty (AZ-140)</span>
+        <span>Azure Fundamentals (AZ-900)</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- VIEW: CERTS -->
+  <main class="view" id="certs">
+    <div class="wrap">
+      <div class="mono">● Certifications</div>
+      <h2 class="h2">Five certs.<br><span class="a">One path.</span></h2>
+      <p class="lede rv" style="max-width:720px;margin-top:30px">Fundamentals, administration, architecture, DevOps, then a specialty. Each one maps to work I do for clients.</p>
+      <div style="margin-top:50px">
+        <div class="row rv"><span class="mono">AZ-900 · 01</span><div><h3 style="margin:0 0 6px;font-size:clamp(24px,3.4vw,40px);letter-spacing:-.03em;font-weight:500">Azure Fundamentals</h3><p style="margin:0;color:#b3b3ba">Core cloud concepts and Azure services. The shared language of every cloud conversation.</p></div></div>
+        <div class="row rv"><span class="mono">AZ-104 · 02</span><div><h3 style="margin:0 0 6px;font-size:clamp(24px,3.4vw,40px);letter-spacing:-.03em;font-weight:500">Azure Administrator Associate</h3><p style="margin:0;color:#b3b3ba">Running Azure day to day: identity, networking, storage, compute and monitoring.</p></div></div>
+        <div class="row rv"><span class="mono">AZ-305 · 03</span><div><h3 style="margin:0 0 6px;font-size:clamp(24px,3.4vw,40px);letter-spacing:-.03em;font-weight:500">Azure Solutions Architect Expert</h3><p style="margin:0;color:#b3b3ba">Designing Azure solutions around security, resilience and cost. Applied in the WordPress on Azure project.</p></div></div>
+        <div class="row rv"><span class="mono">AZ-400 · 04</span><div><h3 style="margin:0 0 6px;font-size:clamp(24px,3.4vw,40px);letter-spacing:-.03em;font-weight:500">DevOps Engineer Expert</h3><p style="margin:0;color:#b3b3ba">Delivery pipelines, infrastructure as code and release strategy. Applied daily with Azure DevOps and Bicep.</p></div></div>
+        <div class="row rv"><span class="mono">AZ-140 · 05</span><div><h3 style="margin:0 0 6px;font-size:clamp(24px,3.4vw,40px);letter-spacing:-.03em;font-weight:500">Azure Virtual Desktop Specialty</h3><p style="margin:0;color:#b3b3ba">Deploying and managing virtual desktops on Azure.</p></div></div>
+      </div>
+      <div class="cta rv" style="margin-top:60px">
+        <span class="mono">● Need this applied to your cloud?</span>
+        <h2>Let’s talk<br><span class="a">architecture.</span></h2>
+        <a class="btn" href="#contact"><b>↗</b>Contact me</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- VIEW: SYSTEM -->
+  <main class="view" id="system">
+    <div class="wrap">
+      <div class="mono">● Design system v1.0</div>
+      <h2 class="h2">Editorial.<br><span class="a">Engineered.</span></h2>
+      <div class="row" style="margin-top:60px">
+        <span class="mono">Principle</span>
+        <p style="margin:0;font-size:22px;letter-spacing:-.02em">Monochrome does the talking. One ember accent marks every action. Mono labels annotate like an engineer’s drawing.</p>
+      </div>
+      <div class="row">
+        <span class="mono">Colour</span>
+        <div class="sw">
+          <div style="background:#0b0b0c">ink<br>#0B0B0C</div>
+          <div style="background:#141416">ink-2<br>#141416</div>
+          <div style="background:#f2f0ec;color:#000">paper<br>#F2F0EC</div>
+          <div style="background:#ff5a1f;color:#000">ember<br>#FF5A1F</div>
+          <div style="background:#8d8d94;color:#000">mute<br>#8D8D94</div>
+          <div style="background:#3ddc84;color:#000">live<br>#3DDC84</div>
+        </div>
+      </div>
+      <div class="row">
+        <span class="mono">Type</span>
+        <div>
+          <div class="mono">Display · Inter Tight 600 · -5.5% tracking</div>
+          <div style="font-size:72px;letter-spacing:-.05em;line-height:1;font-weight:600;margin:8px 0 20px">Aa Build</div>
+          <div class="mono">Body · Inter Tight 400/17 · Labels · JetBrains Mono 500/11 caps</div>
+        </div>
+      </div>
+      <div class="row">
+        <span class="mono">Actions</span>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a class="btn" href="#system"><b>→</b>Primary</a>
+          <a class="btn ghost" href="#system"><b>↗</b>Secondary</a>
+          <span class="tag mono"><i class="dot"></i>Status tag</span>
+        </div>
+      </div>
+      <div class="row">
+        <span class="mono">Shape &amp; space</span>
+        <p style="margin:0;color:#b3b3ba">Cards 18px radius, pills for actions, 8px base grid, 110px section rhythm, 1px hairlines in #2A2A2E.</p>
+      </div>
+      <div class="row" style="padding-bottom:100px">
+        <span class="mono">Motion</span>
+        <p style="margin:0;color:#b3b3ba">Ease-out 0.35 to 0.8s. Reveal on scroll, lift on hover, arrow rotates on press. Reduced-motion respected.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- VIEW: CONTACT -->
+  <main class="view" id="contact">
+    <div class="wrap">
+      <div class="mono">● Contact</div>
+      <h2 class="h2">Let’s build<br><span class="a">something.</span></h2>
+      <div class="ct">
+        <form id="f" novalidate>
+          <label><span class="mono">Name</span><input id="n" name="name" required></label>
+          <label><span class="mono">Email</span><input id="e" name="email" type="email" required></label>
+          <label>
+            <span class="mono">I need</span>
+            <select id="t" name="interest">
+              <option>Cloud consulting</option>
+              <option>Product engineering</option>
+              <option>Training &amp; adoption</option>
+              <option>Something else</option>
+            </select>
+          </label>
+          <label><span class="mono">Message</span><textarea id="m" name="message" rows="5" required></textarea></label>
+          <div class="form-status" id="fs" aria-live="polite" hidden></div>
+          <button class="btn" id="fsb" type="submit"><b>↗</b>Send message</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="ft">
+    <div class="wrap">
+      <section class="mapcard">
+        <div>
+          <span class="mono">● Reach</span>
+          <h2>Built in Accra.<br><span class="a">Delivered across the world.</span></h2>
+          <p>Enterprise platforms and products for clients across four continents.</p>
+        </div>
+        <canvas id="globe" role="img" aria-label="Dotted world map with glowing markers on nine countries across four continents"></canvas>
+      </section>
+      
+      <div class="ft-cols">
+        <div class="ft-brand">
+          <a class="logo c3" href="#home" aria-label="Telvin Varfley, home">
+            <span class="wm" aria-hidden="true"><span class="wt">tv<span class="d"></span></span></span>
+            <span class="rl" aria-hidden="true"></span>
+            Telvin Varfley
+          </a>
+          <p>Software engineer and Azure architect. Cloud-native products that teams actually adopt.</p>
+          <span class="mono"><i class="dot"></i>Accra, Ghana · <span id="clk"></span></span>
+        </div>
+        <div>
+          <span class="mono">Pages</span>
+          <a href="#home">Home</a>
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#expertise">Expertise</a>
+          <a href="#certs">Certs</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div>
+          <span class="mono">Selected work</span>
+          <a href="https://www.wikora.online/" target="_blank" rel="noopener">Wikora ↗</a>
+          <a href="https://expensetracker-67f1d.web.app/login" target="_blank" rel="noopener">WeTrack ↗</a>
+          <a href="#work">WordPress on Azure</a>
+          <a href="#system">Design system</a>
+        </div>
+      </div>
+
+      <div class="ft-rule">
+        <span></span>
+        <a class="btn" href="#contact"><b>↗</b>Contact me</a>
+      </div>
+
+      <div class="ft-bot">
+        <span class="mono">© 2026 Telvin Caesar Varfley</span>
+        <button class="mono toplink" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top ↑</button>
+      </div>
+
+      <div class="ft-word" aria-hidden="true">Telvin Varfley</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="js/splash.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/wheel.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/globe.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
