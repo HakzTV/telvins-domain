@@ -114,3 +114,9 @@ html.gs .view.on {
     transform: none;
   }
 }
+
+@keyframes ab-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .ab-orb { animation: none; }
+  .ab-moon { transition: none; }
+}
