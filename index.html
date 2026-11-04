@@ -413,239 +413,93 @@
   </main>
 
   <!-- VIEW: EXPERTISE -->
- <main class="view" id="expertise">
-
-
-
+  <!-- VIEW: EXPERTISE -->
+  <main class="view" id="expertise">
     <div class="wrap">
-
-
-
       <div class="mono">● Expertise</div>
-
       <h2 class="h2">One engineer.<br><span class="a">Many layers.</span></h2>
-
       <p class="lede xp-lede rv">One person across the whole path, so nothing falls between the layers.</p>
 
-      <div class="xp-layer-layout">
+      <div class="xs-layout">
+        <aside class="xs-side">
+          <div class="xs-stage" role="group" aria-label="Expertise layers">
+            <div class="xs-stack">
+              <button type="button" class="xs-slab" style="--z:3" data-k="01" aria-label="Show Front-end" aria-pressed="true"></button>
+              <button type="button" class="xs-slab" style="--z:2" data-k="02" aria-label="Show Back-end and data" aria-pressed="false"></button>
+              <button type="button" class="xs-slab" style="--z:1" data-k="03" aria-label="Show Cloud and DevOps" aria-pressed="false"></button>
+              <button type="button" class="xs-slab" style="--z:0" data-k="04" aria-label="Show Platform and delivery" aria-pressed="false"></button>
+            </div>
+          </div>
+        </aside>
 
-        <div class="xp-layer-stage" role="group" aria-label="Explore the four expertise layers">
+        <div class="xs-list">
+          <div class="xs-row on">
+            <h3 class="xs-hd"><button type="button" class="xs-rh" id="xs-h-0" aria-expanded="true" aria-controls="xs-b-0"><span class="xs-n">01</span><span class="xs-title">Front-end</span><span class="xs-pl" aria-hidden="true"></span></button></h3>
+            <div class="xs-rb" id="xs-b-0" role="region" aria-labelledby="xs-h-0"><div><div class="xs-rbi">
+              <p class="xs-t">Interfaces people choose to use</p>
+              <p>React and TypeScript front-ends built for speed and clarity, from the first wireframe.</p>
+              <div class="chips"><span>React</span><span>TypeScript</span><span>JavaScript</span><span>HTML</span><span>Sass</span><span>jQuery</span><span>Vite</span><span>TanStack Query</span><span>SPFx</span><span>SharePoint</span><span>Figma</span><span>PWA</span></div>
+              <p class="xs-proof">Clean UI and fast loading times with best UX practices. <a href="https://www.wikora.online/" target="_blank" rel="noopener">See Wikora ↗</a></p>
+            </div></div></div>
+          </div>
 
-          <div class="xp-layer-stack"><button type="button" class="xp-layer-slab on" style="--z:3" data-k="01" aria-label="Show Front-end" aria-pressed="true" data-layer="0"></button>
+          <div class="xs-row">
+            <h3 class="xs-hd"><button type="button" class="xs-rh" id="xs-h-1" aria-expanded="false" aria-controls="xs-b-1"><span class="xs-n">02</span><span class="xs-title">Back-end &amp; data</span><span class="xs-pl" aria-hidden="true"></span></button></h3>
+            <div class="xs-rb" id="xs-b-1" role="region" aria-labelledby="xs-h-1"><div><div class="xs-rbi">
+              <p class="xs-t">Data that stays organised and secure</p>
+              <p>APIs and databases designed around proper access controls and data governance.</p>
+              <div class="chips"><span>Azure SQL</span><span>PostgreSQL</span><span>MongoDB</span><span>MySQL</span><span>Firestore</span><span>Firebase Auth</span><span>Appwrite</span><span>MERN stack APIs</span><span>SQL</span><span>NoSQL</span></div>
+              <p class="xs-proof">Role-based access and organisation-scoped data in Wikora. <a href="#work">See the case ↗</a></p>
+            </div></div></div>
+          </div>
 
-<button type="button" class="xp-layer-slab" style="--z:2" data-k="02" aria-label="Show Back-end &amp; data" aria-pressed="false" data-layer="1"></button>
+          <div class="xs-row">
+            <h3 class="xs-hd"><button type="button" class="xs-rh" id="xs-h-2" aria-expanded="false" aria-controls="xs-b-2"><span class="xs-n">03</span><span class="xs-title">Cloud &amp; DevOps</span><span class="xs-pl" aria-hidden="true"></span></button></h3>
+            <div class="xs-rb" id="xs-b-2" role="region" aria-labelledby="xs-h-2"><div><div class="xs-rbi">
+              <p class="xs-t">Infrastructure that rebuilds from code</p>
+              <p>Azure and Google Cloud environments defined in Bicep/Terraform and shipped through automated pipelines.</p>
+              <div class="chips"><span>Azure</span><span>App Service</span><span>Azure Functions</span><span>Key Vault</span><span>Log Analytics</span><span>Bicep</span><span>Terraform</span><span>Azure DevOps</span><span>GitHub Actions</span><span>Git</span><span>Bash</span><span>Google Cloud</span><span>Firebase</span><span>Azure Virtual Desktop</span></div>
+              <p class="xs-proof">High-availability WordPress hosting, redeployable from code. <a href="https://github.com/HakzTV/WordPress-on-Azure" target="_blank" rel="noopener">See the repo ↗</a></p>
+            </div></div></div>
+          </div>
 
-<button type="button" class="xp-layer-slab" style="--z:1" data-k="03" aria-label="Show Cloud &amp; DevOps" aria-pressed="false" data-layer="2"></button>
-
-<button type="button" class="xp-layer-slab" style="--z:0" data-k="04" aria-label="Show Platform &amp; delivery" aria-pressed="false" data-layer="3"></button></div>
-
+          <div class="xs-row">
+            <h3 class="xs-hd"><button type="button" class="xs-rh" id="xs-h-3" aria-expanded="false" aria-controls="xs-b-3"><span class="xs-n">04</span><span class="xs-title">Platform &amp; delivery</span><span class="xs-pl" aria-hidden="true"></span></button></h3>
+            <div class="xs-rb" id="xs-b-3" role="region" aria-labelledby="xs-h-3"><div><div class="xs-rbi">
+              <p class="xs-t">Systems your team actually uses</p>
+              <p>Automate processes, ship the platform, then train the team so the tools are in use after launch.</p>
+              <div class="chips"><span>Power Apps</span><span>Power Automate</span><span>Azure Boards</span><span>Planner</span><span>User training</span></div>
+              <p class="xs-proof">30% productivity gain and 500+ users trained at eSolutions.</p>
+            </div></div></div>
+          </div>
         </div>
-
-        <div class="xp-layer-details">
-
-          <div class="xp-layer-tabs" role="tablist" aria-label="Expertise layers"><button type="button" class="xp-layer-tab on" id="xp-layer-tab-0" role="tab" aria-selected="true" aria-controls="xp-layer-panel-0" tabindex="0" data-layer="0">Front-end</button>
-
-<button type="button" class="xp-layer-tab" id="xp-layer-tab-1" role="tab" aria-selected="false" aria-controls="xp-layer-panel-1" tabindex="-1" data-layer="1">Back-end &amp; data</button>
-
-<button type="button" class="xp-layer-tab" id="xp-layer-tab-2" role="tab" aria-selected="false" aria-controls="xp-layer-panel-2" tabindex="-1" data-layer="2">Cloud &amp; DevOps</button>
-
-<button type="button" class="xp-layer-tab" id="xp-layer-tab-3" role="tab" aria-selected="false" aria-controls="xp-layer-panel-3" tabindex="-1" data-layer="3">Platform &amp; delivery</button></div>
-
-          <div class="xp-layer-panel" id="xp-layer-panel-0" role="tabpanel" aria-labelledby="xp-layer-tab-0" tabindex="0">
-
-
-
-          <span class="mono">01 · Front-end</span>
-
-
-
-          <h3 class="xp-layer-title">Interfaces people choose to use</h3>
-
-
-
-          <p>React and TypeScript front-ends built for speed and clarity, from the first wireframe.</p>
-
-
-
-          <div class="chips"><span>React</span><span>TypeScript</span><span>SPFx</span><span>SharePoint</span><span>TanStack Query</span><span>Figma</span></div>
-
-
-
-          <p class="xp-layer-proof">Clean UI and fast loading times with best UX practices. <a href="https://www.wikora.online/" target="_blank" rel="noopener">See Wikora ↗</a></p>
-
-</div>
-
-<div class="xp-layer-panel" id="xp-layer-panel-1" role="tabpanel" aria-labelledby="xp-layer-tab-1" tabindex="0" hidden>
-
-
-
-          <span class="mono">02 · Back-end &amp; data</span>
-
-
-
-          <h3 class="xp-layer-title">Data that stays organised and secure</h3>
-
-
-
-          <p>APIs and databases designed around proper access controls and data governance.</p>
-
-
-
-          <div class="chips"><span>Azure SQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Firestore</span><span>MERN stack APIs</span></div>
-
-
-
-          <p class="xp-layer-proof">Role-based access and organisation-scoped data in Wikora. <a href="#work">See the case ↗</a></p>
-
-</div>
-
-<div class="xp-layer-panel" id="xp-layer-panel-2" role="tabpanel" aria-labelledby="xp-layer-tab-2" tabindex="0" hidden>
-
-
-
-          <span class="mono">03 · Cloud &amp; DevOps</span>
-
-
-
-          <h3 class="xp-layer-title">Infrastructure that rebuilds from code</h3>
-
-
-
-          <p>Azure and Google Cloud environments defined in Bicep/Terraform and shipped through automated pipelines.</p>
-
-
-
-          <div class="chips"><span>Azure</span><span>Google Cloud</span><span>Bicep</span><span>Azure DevOps</span><span>GitHub Actions</span><span>Firebase</span></div>
-
-
-
-          <p class="xp-layer-proof">High-availability WordPress hosting, redeployable from code. <a href="https://github.com/HakzTV/WordPress-on-Azure" target="_blank" rel="noopener">See the repo ↗</a></p>
-
-</div>
-
-<div class="xp-layer-panel" id="xp-layer-panel-3" role="tabpanel" aria-labelledby="xp-layer-tab-3" tabindex="0" hidden>
-
-
-
-          <span class="mono">04 · Platform &amp; delivery</span>
-
-
-
-          <h3 class="xp-layer-title">Systems your team actually uses</h3>
-
-
-
-          <p>Automate processes, ship the platform,
-          then train the team so the tools are in use after launch.</p>
-
-
-
-          <div class="chips"><span>Power Apps</span><span>Power Automate</span><span>Appwrite</span><span>Azure Boards</span><span>Planner</span></div>
-
-
-
-          <p class="xp-layer-proof">30% productivity gain and 500+ users trained at eSolutions. </p>
-
-</div>
-
-        </div>
-
       </div>
 
-
+      <div class="xs-rib" id="xs-rib" aria-hidden="true"></div>
 
       <div class="mono" style="margin:80px 0 0">● How I work</div>
-
-
-
       <div class="xp-flow rv">
-
-
-
         <div><span class="mono">01</span><h3>Wireframe</h3><p>Shape the idea with you before any code.</p></div>
-
-
-
         <div><span class="mono">02</span><h3>Build</h3><p>Ship in small iterations and learn fast.</p></div>
-
-
-
         <div><span class="mono">03</span><h3>Ship</h3><p>Deploy through automated pipelines.</p></div>
-
-
-
         <div><span class="mono">04</span><h3>Monitor</h3><p>Stay with it in production.</p></div>
-
-
-
       </div>
-
-
-
-
-
-
 
       <div class="mono" style="margin:80px 0 0">● Ways to work together</div>
-
-
-
       <div class="grid3" style="margin-top:20px">
-
-
-
         <div class="card rv"><span class="mono">Advise</span><h3>Cloud consulting</h3><p>Architecture review, Azure and GCP guidance, delivery pipelines.</p></div>
-
-
-
         <div class="card hot rv"><span class="mono">Build</span><h3>Product engineering</h3><p>Front-end or full-stack SaaS, from your idea to deployment.</p></div>
-
-
-
         <div class="card rv"><span class="mono">Enable</span><h3>Adoption &amp; training</h3><p>Onboarding teams onto new platforms so they stick.</p></div>
-
-
-
       </div>
-
-
-
-
-
-
 
       <p class="mono" style="margin:50px 0 0">● Certified across Azure · <a href="#certs" style="color:var(--ember)">5 certifications →</a></p>
 
-
-
-
-
-
-
       <div class="cta cta-sm rv" style="margin:50px 0 90px">
-
-
-
         <span class="mono">● Work with me</span>
-
-
-
         <h2>Not sure where to start?<br><span class="a">Tell me what you need.</span></h2>
-
-
-
         <a class="btn" href="#contact"><b>↗</b>Contact me</a>
-
-
-
       </div>
-
-
-
     </div>
-
-
-
   </main>
 
   <!-- VIEW: CERTS -->

@@ -1,45 +1,83 @@
-(function(){
+/* Expertise: layered stack + editorial rows + tool ribbons.
+   The stack, the rows and the ribbons stay in sync. Ribbons are built from
+   the chips inside each row, so add a tool to a row and it appears there too. */
+(function () {
+  var view = document.getElementById('expertise');
+  if (!view) return;
 
-  var root=document.getElementById('expertise');
+  var slabs = [].slice.call(view.querySelectorAll('.xs-slab'));
+  var rows = [].slice.call(view.querySelectorAll('.xs-row'));
+  var rib = view.querySelector('#xs-rib');
+  var layout = view.querySelector('.xs-layout');
+  if (!slabs.length || !rows.length) return;
 
-  if(!root)return;
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cur = 0;
+  var auto = !still;
+  var paused = false;
 
-  var tabs=Array.from(root.querySelectorAll('.xp-layer-tab'));
-
-  var slabs=Array.from(root.querySelectorAll('.xp-layer-slab'));
-
-  var panels=Array.from(root.querySelectorAll('.xp-layer-panel'));
-
-  function pick(index,focus){
-
-    tabs.forEach(function(tab,i){var active=i===index;tab.classList.toggle('on',active);tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;});
-
-    slabs.forEach(function(slab,i){slab.classList.toggle('on',i===index);slab.setAttribute('aria-pressed',String(i===index));});
-
-    panels.forEach(function(panel,i){panel.hidden=i!==index;});
-
-    if(focus)tabs[index].focus();
-
+  function esc(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
   }
 
-  tabs.concat(slabs).forEach(function(button){button.addEventListener('click',function(){pick(Number(button.dataset.layer),false);});});
+  function buildRibbons() {
+    if (!rib) return;
+    var all = [];
+    rows.forEach(function (row, i) {
+      [].forEach.call(row.querySelectorAll('.chips span'), function (s) {
+        all.push({ t: s.textContent, l: i });
+      });
+    });
+    [0, 1].forEach(function (k) {
+      var arr = k ? all.slice().reverse() : all;
+      var html = arr.map(function (a) {
+        return '<span data-l="' + a.l + '">' + esc(a.t) + '</span>';
+      }).join('');
+      var tr = document.createElement('div');
+      tr.className = 'xs-tr' + (k ? ' xs-r' : '');
+      tr.innerHTML = '<div class="xs-tk">' + html + html + '</div>';
+      rib.appendChild(tr);
+    });
+  }
 
-  tabs.forEach(function(tab,index){tab.addEventListener('keydown',function(event){
+  function pick(i, user) {
+    if (user) auto = false;
+    cur = i;
+    slabs.forEach(function (b, j) {
+      b.classList.toggle('on', j === i);
+      b.setAttribute('aria-pressed', j === i ? 'true' : 'false');
+    });
+    rows.forEach(function (r, j) {
+      r.classList.toggle('on', j === i);
+      r.querySelector('.xs-rh').setAttribute('aria-expanded', j === i ? 'true' : 'false');
+    });
+    if (rib) {
+      [].forEach.call(rib.querySelectorAll('span'), function (s) {
+        s.classList.toggle('on', +s.getAttribute('data-l') === i);
+      });
+    }
+  }
 
-    var next=index;
+  slabs.forEach(function (b, i) {
+    b.addEventListener('click', function () { pick(i, true); });
+  });
+  rows.forEach(function (r, i) {
+    r.querySelector('.xs-rh').addEventListener('click', function () { pick(i, true); });
+  });
 
-    if(event.key==='ArrowRight')next=(index+1)%tabs.length;
+  if (layout) {
+    layout.addEventListener('pointerenter', function () { paused = true; });
+    layout.addEventListener('pointerleave', function () { paused = false; });
+    layout.addEventListener('focusin', function () { auto = false; });
+  }
 
-    else if(event.key==='ArrowLeft')next=(index+tabs.length-1)%tabs.length;
+  buildRibbons();
+  pick(0, false);
 
-    else if(event.key==='Home')next=0;
-
-    else if(event.key==='End')next=tabs.length-1;
-
-    else return;
-
-    event.preventDefault();pick(next,true);
-
-  });});
-
+  if (!still) {
+    setInterval(function () {
+      if (!auto || paused || document.hidden || !view.offsetHeight) return;
+      pick((cur + 1) % rows.length, false);
+    }, 5000);
+  }
 })();
