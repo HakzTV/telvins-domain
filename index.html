@@ -146,32 +146,47 @@
       <span class="nm">Telvin Varfley</span>
     </a>
     <div class="links" id="links">
-      <a href="#home">Home</a>
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#expertise">Expertise</a>
-      <a href="#certs">Certs</a>
-      <a href="#contact">Contact</a>
+      <a href="#home" data-i18n="nav.home">Home</a>
+      <a href="#work" data-i18n="nav.work">Work</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#expertise" data-i18n="nav.expertise">Expertise</a>
+      <a href="#certs" data-i18n="nav.certs">Certs</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
     </div>
-    <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
-      <span></span>
-      <span></span>
-    </button>
+    <div class="nav-actions">
+      <button class="lang-switch" id="langSwitch" type="button" aria-label="Switch language" title="Switch language" onclick="window.tvI18n &amp;&amp; window.tvI18n.toggleLanguage()">
+        <span class="ls-opt active" data-opt="en">EN</span>
+        <span class="ls-sep">/</span>
+        <span class="ls-opt" data-opt="fr">FR</span>
+      </button>
+      <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </nav>
 
   <!-- Mobile Navigation Menu -->
   <div id="menu" role="dialog" aria-label="Menu" aria-hidden="true">
     <div class="mn">
-      <a href="#home"><span class="mono">01</span>Home<em aria-hidden="true">→</em></a>
-      <a href="#work"><span class="mono">02</span>Work<em aria-hidden="true">→</em></a>
-      <a href="#about"><span class="mono">03</span>About<em aria-hidden="true">→</em></a>
-      <a href="#expertise"><span class="mono">04</span>Expertise<em aria-hidden="true">→</em></a>
-      <a href="#certs"><span class="mono">05</span>Certs<em aria-hidden="true">→</em></a>
-      <a href="#contact"><span class="mono">06</span>Contact<em aria-hidden="true">→</em></a>
+      <a href="#home"><span class="mono">01</span><span data-i18n="nav.home">Home</span><em aria-hidden="true">→</em></a>
+      <a href="#work"><span class="mono">02</span><span data-i18n="nav.work">Work</span><em aria-hidden="true">→</em></a>
+      <a href="#about"><span class="mono">03</span><span data-i18n="nav.about">About</span><em aria-hidden="true">→</em></a>
+      <a href="#expertise"><span class="mono">04</span><span data-i18n="nav.expertise">Expertise</span><em aria-hidden="true">→</em></a>
+      <a href="#certs"><span class="mono">05</span><span data-i18n="nav.certs">Certs</span><em aria-hidden="true">→</em></a>
+      <a href="#contact"><span class="mono">06</span><span data-i18n="nav.contact">Contact</span><em aria-hidden="true">→</em></a>
+    </div>
+    <div class="menu-lang-row">
+      <span class="mono" data-i18n="menu.lang_label">Language</span>
+      <div class="menu-lang-opts">
+        <button type="button" class="menu-lang-btn active" data-opt="en" onclick="window.tvI18n &amp;&amp; window.tvI18n.setLanguage('en')">English</button>
+        <span class="ls-sep">·</span>
+        <button type="button" class="menu-lang-btn" data-opt="fr" onclick="window.tvI18n &amp;&amp; window.tvI18n.setLanguage('fr')">Français</button>
+      </div>
     </div>
     <div class="mf">
-      <span class="mono">Software engineer · Azure architect</span>
-      <span class="mono">Accra, Ghana</span>
+      <span class="mono" data-i18n="menu.role">Software engineer · Azure architect</span>
+      <span class="mono" data-i18n="menu.location">Accra, Ghana</span>
     </div>
   </div>
 
@@ -182,13 +197,13 @@
       <div class="wrap">
   <div class="hero-arch-stage">
   <div class="hero-main">
-    <span class="tag mono hx-rise" style="--d:.05"><i class="dot"></i>Open to consulting &amp; product work</span>
+    <span class="tag mono hx-rise" style="--d:.05" data-i18n="hero.badge"><i class="dot"></i>Open to consulting &amp; product work</span>
     <h1>
       <span class="hx-w hx-rise" style="--d:.15">Telvin</span>
       <span class="hx-w hx-rise" style="--d:.3">Varfley</span>
     </h1>
-    <div class="mono hx-rise" style="--d:.45">Software Engineer · Azure Architect · Accra, Ghana</div>
-    <p class="lede hx-rise" style="--d:.55">I build cloud-native software that real teams <em>actually adopt</em>.</p>
+    <div class="mono hx-rise" style="--d:.45" data-i18n="hero.subhead">Software Engineer · Azure Architect · Accra, Ghana</div>
+    <p class="lede hx-rise" style="--d:.55" data-i18n="hero.lede">I build cloud-native software that real teams <em>actually adopt</em>.</p>
 
     <div class="hx-pipe hx-rise" style="--d:.65" aria-label="From wireframe to production monitoring">
       <span class="hx-fill"></span>
@@ -196,15 +211,15 @@
         <path class="hx-snake-base" d="M 12,12 L 244,12 A 24,24 0 0 1 244,60 L 12,60" stroke="var(--line)" stroke-width="2" stroke-linecap="round"/>
         <path class="hx-snake-glow" d="M 12,12 L 244,12 A 24,24 0 0 1 244,60 L 12,60" stroke="var(--ember)" stroke-width="2" stroke-linecap="round"/>
       </svg>
-      <div class="hx-nd" style="--i:0"><i></i><span>Wireframe</span></div>
-      <div class="hx-nd" style="--i:1"><i></i><span>Build</span></div>
-      <div class="hx-nd" style="--i:2"><i></i><span>Ship</span></div>
-      <div class="hx-nd" style="--i:3"><i></i><span>Monitor</span></div>
+      <div class="hx-nd" style="--i:0"><i></i><span data-i18n="hero.step_wireframe">Wireframe</span></div>
+      <div class="hx-nd" style="--i:1"><i></i><span data-i18n="hero.step_build">Build</span></div>
+      <div class="hx-nd" style="--i:2"><i></i><span data-i18n="hero.step_ship">Ship</span></div>
+      <div class="hx-nd" style="--i:3"><i></i><span data-i18n="hero.step_monitor">Monitor</span></div>
     </div>
 
     <div class="hero-cta hx-rise" style="--d:.75">
-      <a class="btn" href="#work"><b>→</b>See my work</a>
-      <a class="btn ghost" href="#contact"><b>↗</b>Contact me</a>
+      <a class="btn" href="#work" data-i18n="hero.btn_work"><b>→</b>See my work</a>
+      <a class="btn ghost" href="#contact" data-i18n="hero.btn_contact"><b>↗</b>Contact me</a>
     </div>
   </div>
 
@@ -217,67 +232,67 @@
     <svg class="hx-rsvg" viewBox="0 0 100 133" preserveAspectRatio="none" aria-hidden="true">
       <path pathLength="100" d="M0 128V50A50 50 0 0 1 100 50V128Q100 133 95 133H5Q0 133 0 128Z"/>
     </svg>
-    <div class="hx-live mono"><i class="dot"></i>In production</div>
-    <div class="chip chip-tl"><i></i><span>Accra, Ghana</span></div>
-    <div class="chip chip-mr"><i></i><span>Azure Architect</span></div>
-    <div class="chip chip-bl"><i></i><span>Full-stack</span></div>
+    <div class="hx-live mono" data-i18n="hero.live_pill"><i class="dot"></i>In production</div>
+    <div class="chip chip-tl"><i></i><span data-i18n="hero.chip_location">Accra, Ghana</span></div>
+    <div class="chip chip-mr"><i></i><span data-i18n="hero.chip_role">Azure Architect</span></div>
+    <div class="chip chip-bl"><i></i><span data-i18n="hero.chip_stack">Full-stack</span></div>
   </div>
 </div>
         <div class="orbit" aria-label="My values"><div class="wheel" id="wheel"></div></div>
         <div class="vcap" id="vcap" aria-live="polite"></div>
         <div class="proof">
-          <div><b>30<i>%</i></b><span class="mono">team productivity gain</span></div>
-          <div><b>40<i>%</i></b><span class="mono">faster load times</span></div>
-          <div><b>28<i>%</i></b><span class="mono">lower bounce rate</span></div>
-          <div><b>500<i>+</i></b><span class="mono">users trained</span></div>
-          <div><b>9+</b><span class="mono">countries delivered</span></div>
+          <div><b>30<i>%</i></b><span class="mono" data-i18n="proof.metric1">team productivity gain</span></div>
+          <div><b>40<i>%</i></b><span class="mono" data-i18n="proof.metric2">faster load times</span></div>
+          <div><b>28<i>%</i></b><span class="mono" data-i18n="proof.metric3">lower bounce rate</span></div>
+          <div><b>500<i>+</i></b><span class="mono" data-i18n="proof.metric4">users trained</span></div>
+          <div><b>9+</b><span class="mono" data-i18n="proof.metric5">countries delivered</span></div>
         </div>
       </div>
     </section>
 
     <section class="paper">
       <div class="wrap">
-        <div class="mono">● Manifesto</div>
-        <h2 class="h2 rv">Interface.<br>Infrastructure.<br><span class="a">Adoption.</span></h2>
+        <div class="mono" data-i18n="manifesto.label">● Manifesto</div>
+        <h2 class="h2 rv" data-i18n="manifesto.h2">Interface.<br>Infrastructure.<br><span class="a">Adoption.</span></h2>
         <div class="disc">
-          <a href="#expertise"><span class="mono">01</span><h3>Front-end architecture</h3><p>React, TypeScript, SPFx. Fast, accessible, human-centred.</p></a>
-          <a href="#expertise"><span class="mono">02</span><h3>Back-end &amp; data</h3><p>Azure SQL, PostgreSQL, MongoDB.</p></a>
-          <a href="#expertise"><span class="mono">03</span><h3>Cloud &amp; DevOps</h3><p>Azure, GCP, Bicep IaC, CI/CD pipelines.</p></a>
-          <a href="#expertise"><span class="mono">04</span><h3>SaaS product building</h3><p>Multi-tenant, role-based, offline-first.</p></a>
-          <a href="#expertise"><span class="mono">05</span><h3>Enablement &amp; delivery</h3><p>Bridging technical design and non-technical teams.</p></a>
+          <a href="#expertise"><span class="mono">01</span><h3 data-i18n="manifesto.d1_title">Front-end architecture</h3><p data-i18n="manifesto.d1_desc">React, TypeScript, SPFx. Fast, accessible, human-centred.</p></a>
+          <a href="#expertise"><span class="mono">02</span><h3 data-i18n="manifesto.d2_title">Back-end &amp; data</h3><p data-i18n="manifesto.d2_desc">Azure SQL, PostgreSQL, MongoDB.</p></a>
+          <a href="#expertise"><span class="mono">03</span><h3 data-i18n="manifesto.d3_title">Cloud &amp; DevOps</h3><p data-i18n="manifesto.d3_desc">Azure, GCP, Bicep IaC, CI/CD pipelines.</p></a>
+          <a href="#expertise"><span class="mono">04</span><h3 data-i18n="manifesto.d4_title">SaaS product building</h3><p data-i18n="manifesto.d4_desc">Multi-tenant, role-based, offline-first.</p></a>
+          <a href="#expertise"><span class="mono">05</span><h3 data-i18n="manifesto.d5_title">Enablement &amp; delivery</h3><p data-i18n="manifesto.d5_desc">Bridging technical design and non-technical teams.</p></a>
         </div>
       </div>
     </section>
 
     <section class="sec">
       <div class="wrap">
-        <div class="mono">● The arc</div>
-        <h2 class="h2 rv">From pixels to <span class="a">platforms.</span></h2>
+        <div class="mono" data-i18n="arc.label">● The arc</div>
+        <h2 class="h2 rv" data-i18n="arc.h2">From pixels to <span class="a">platforms.</span></h2>
         <div style="margin-top:60px">
-          <div class="chap rv"><span class="mono">2019 to 2023</span><div><h3>Learn the fundamentals</h3><p>BSc Information Technology at BluCrest College. Architecture, algorithms and computability. The base under everything built since.</p></div></div>
-          <div class="chap rv"><span class="mono">Jun to Dec 2023</span><div><h3>Own the interface</h3><p>Front-End Developer at Advertising &amp; Publisher Solutions Ghana. Rebuilt product UIs: bounce rate down 28%, load times down 40%, engagement up 32%, UI bugs down 35%.</p></div></div>
-          <div class="chap rv"><span class="mono">2024 to Now</span><div><h3>Architect the system</h3><p>Technical Consultant at eSolutions Consulting. Front-end architecture, Azure DevOps pipelines and Bicep infrastructure, Power Platform automation that lifted team productivity by 30%.</p></div></div>
-          <div class="chap rv"><span class="mono">Now</span><div><h3>Build the products</h3><p>Wikora and WeTrack: live products, one with a paying client, built on what enterprise work taught me.</p></div></div>
+          <div class="chap rv"><span class="mono" data-i18n="arc.c1_time">2019 to 2023</span><div><h3 data-i18n="arc.c1_title">Learn the fundamentals</h3><p data-i18n="arc.c1_desc">BSc Information Technology at BluCrest College. Architecture, algorithms and computability. The base under everything built since.</p></div></div>
+          <div class="chap rv"><span class="mono" data-i18n="arc.c2_time">Jun to Dec 2023</span><div><h3 data-i18n="arc.c2_title">Own the interface</h3><p data-i18n="arc.c2_desc">Front-End Developer at Advertising &amp; Publisher Solutions Ghana. Rebuilt product UIs: bounce rate down 28%, load times down 40%, engagement up 32%, UI bugs down 35%.</p></div></div>
+          <div class="chap rv"><span class="mono" data-i18n="arc.c3_time">2024 to Now</span><div><h3 data-i18n="arc.c3_title">Architect the system</h3><p data-i18n="arc.c3_desc">Technical Consultant at eSolutions Consulting. Front-end architecture, Azure DevOps pipelines and Bicep infrastructure, Power Platform automation that lifted team productivity by 30%.</p></div></div>
+          <div class="chap rv"><span class="mono" data-i18n="arc.c4_time">Now</span><div><h3 data-i18n="arc.c4_title">Build the products</h3><p data-i18n="arc.c4_desc">Wikora and WeTrack: live products, one with a paying client, built on what enterprise work taught me.</p></div></div>
         </div>
       </div>
     </section>
 
     <section class="sec" style="padding-top:0">
       <div class="wrap">
-        <div class="mono">● Selected work</div>
+        <div class="mono" data-i18n="selwork.label">● Selected work</div>
         <div class="grid3">
-          <a class="card rv" href="#work"><div class="art" data-k="WIKORA"></div><h3>Wikora</h3><p>Multi-tenant, offline-first knowledge management SaaS.</p><div class="chips"><span>Document Management</span><span>Secure Access</span></div></a>
-          <a class="card hot rv" href="#work"><div class="art" data-k="WETRACK" style="filter:grayscale(1) contrast(1.2)"></div><h3>WeTrack</h3><p>Income and expense tracking with receipts sent by email or WhatsApp. My first product with a paying client.</p><div class="chips"><span style="border-color:#000;color:#000">Income &amp; expenses</span><span style="border-color:#000;color:#000">Receipts</span></div></a>
-          <a class="card rv" href="#work"><div class="art" data-k="AZURE IAC"></div><h3>WordPress on Azure</h3><p>Highly available hosting, fully automated through Bicep.</p><div class="chips"><span>Bicep</span><span>Key Vault</span><span>Automation</span></div></a>
+          <a class="card rv" href="#work"><div class="art" data-k="WIKORA"></div><h3>Wikora</h3><p data-i18n="selwork.wikora_desc">Multi-tenant, offline-first knowledge management SaaS.</p><div class="chips"><span data-i18n="selwork.wikora_chip1">Document Management</span><span data-i18n="selwork.wikora_chip2">Secure Access</span></div></a>
+          <a class="card hot rv" href="#work"><div class="art" data-k="WETRACK" style="filter:grayscale(1) contrast(1.2)"></div><h3>WeTrack</h3><p data-i18n="selwork.wetrack_desc">Income and expense tracking with receipts sent by email or WhatsApp. My first product with a paying client.</p><div class="chips"><span style="border-color:#000;color:#000" data-i18n="selwork.wetrack_chip1">Income &amp; expenses</span><span style="border-color:#000;color:#000" data-i18n="selwork.wetrack_chip2">Receipts</span></div></a>
+          <a class="card rv" href="#work"><div class="art" data-k="AZURE IAC"></div><h3>WordPress on Azure</h3><p data-i18n="selwork.wp_desc">Highly available hosting, fully automated through Bicep.</p><div class="chips"><span data-i18n="selwork.wp_chip1">Bicep</span><span data-i18n="selwork.wp_chip2">Key Vault</span><span data-i18n="selwork.wp_chip3">Automation</span></div></a>
         </div>
       </div>
     </section>
 
     <div class="wrap">
       <div class="cta rv">
-        <span class="mono">● Let’s work together</span>
-        <h2>Your idea, built<br><span class="a">and actually used.</span></h2>
-        <a class="btn" href="#contact"><b>↗</b>Contact me</a>
+        <span class="mono" data-i18n="home.cta_label">● Let’s work together</span>
+        <h2 data-i18n="home.cta_h2">Your idea, built<br><span class="a">and actually used.</span></h2>
+        <a class="btn" href="#contact" data-i18n="home.cta_btn"><b>↗</b>Contact me</a>
       </div>
     </div>
   </main>
@@ -285,69 +300,69 @@
   <!-- VIEW: WORK -->
   <main class="view" id="work">
     <div class="wrap">
-      <div class="mono">● Selected work</div>
-      <h2 class="h2">Problems solved,<br><span class="a">not screens shipped.</span></h2>
+      <div class="mono" data-i18n="work.label">● Selected work</div>
+      <h2 class="h2" data-i18n="work.h2">Problems solved,<br><span class="a">not screens shipped.</span></h2>
       <div style="margin-top:70px">
         <article class="case rv">
           <div>
-            <span class="mono">01 · SaaS · Live product</span>
+            <span class="mono" data-i18n="work.c1_tag">01 · SaaS · Live product</span>
             <h2>Wikora</h2>
             <div class="chips"><span>React</span><span>TypeScript</span><span>Vite</span><span>Firebase Auth</span><span>Firestore</span><span>TanStack Query</span></div>
-            <p style="margin-top:20px"><a class="btn" href="https://www.wikora.online/" target="_blank" rel="noopener"><b>↗</b>View live product</a></p>
+            <p style="margin-top:20px"><a class="btn" href="https://www.wikora.online/" target="_blank" rel="noopener" data-i18n="work.c1_btn"><b>↗</b>View live product</a></p>
           </div>
           <dl>
-            <div><dt class="mono">Problem</dt><dd>Organisations keep internal knowledge scattered, unversioned and loosely controlled.</dd></div>
-            <div><dt class="mono">Build</dt><dd>A multi-tenant knowledge platform with role-based access, organisation-scoped data isolation, invitations and access revocation. Offline-first reads and edits with optimistic updates and automatic sync.</dd></div>
-            <div><dt class="mono">Outcome</dt><dd>One centralised, versioned source of truth, with domain models designed for analytics and AI-assisted retrieval.</dd></div>
+            <div><dt class="mono" data-i18n="work.problem_label">Problem</dt><dd data-i18n="work.c1_problem">Organisations keep internal knowledge scattered, unversioned and loosely controlled.</dd></div>
+            <div><dt class="mono" data-i18n="work.build_label">Build</dt><dd data-i18n="work.c1_build">A multi-tenant knowledge platform with role-based access, organisation-scoped data isolation, invitations and access revocation. Offline-first reads and edits with optimistic updates and automatic sync.</dd></div>
+            <div><dt class="mono" data-i18n="work.outcome_label">Outcome</dt><dd data-i18n="work.c1_outcome">One centralised, versioned source of truth, with domain models designed for analytics and AI-assisted retrieval.</dd></div>
           </dl>
         </article>
 
         <article class="case rv">
           <div>
-            <span class="mono">02 · PWA · First paying client</span>
+            <span class="mono" data-i18n="work.c2_tag">02 · PWA · First paying client</span>
             <h2>WeTrack</h2>
             <div class="chips"><span>PWA</span><span>Income &amp; expenses</span><span>Email receipts</span><span>WhatsApp receipts</span></div>
-            <p style="margin-top:20px"><a class="btn" href="https://expensetracker-67f1d.web.app/login" target="_blank" rel="noopener"><b>↗</b>Open WeTrack</a></p>
+            <p style="margin-top:20px"><a class="btn" href="https://expensetracker-67f1d.web.app/login" target="_blank" rel="noopener" data-i18n="work.c2_btn"><b>↗</b>Open WeTrack</a></p>
           </div>
           <dl>
-            <div><dt class="mono">Problem</dt><dd>Keeping income and expenses in order, and getting receipts to customers without friction.</dd></div>
-            <div><dt class="mono">Build</dt><dd>A progressive web app (PWA) that records income and expenses and sends receipts to customers by email or WhatsApp.</dd></div>
-            <div><dt class="mono">Outcome</dt><dd>Helps small businesses keep a proper history of money in and money out. Already used by a paying client.</dd></div>
+            <div><dt class="mono" data-i18n="work.problem_label">Problem</dt><dd data-i18n="work.c2_problem">Keeping income and expenses in order, and getting receipts to customers without friction.</dd></div>
+            <div><dt class="mono" data-i18n="work.build_label">Build</dt><dd data-i18n="work.c2_build">A progressive web app (PWA) that records income and expenses and sends receipts to customers by email or WhatsApp.</dd></div>
+            <div><dt class="mono" data-i18n="work.outcome_label">Outcome</dt><dd data-i18n="work.c2_outcome">Helps small businesses keep a proper history of money in and money out. Already used by a paying client.</dd></div>
           </dl>
         </article>
 
         <article class="case rv">
           <div>
-            <span class="mono">03 · Cloud · Infrastructure as code</span>
+            <span class="mono" data-i18n="work.c3_tag">03 · Cloud · Infrastructure as code</span>
             <h2>WordPress on Azure</h2>
             <div class="chips"><span>Bicep</span><span>App Service</span><span>MySQL</span><span>Key Vault</span><span>Log Analytics</span><span>GitHub Actions</span></div>
-            <p style="margin-top:20px"><a class="btn" href="https://github.com/HakzTV/WordPress-on-Azure" target="_blank" rel="noopener"><b>↗</b>View on GitHub</a></p>
+            <p style="margin-top:20px"><a class="btn" href="https://github.com/HakzTV/WordPress-on-Azure" target="_blank" rel="noopener" data-i18n="work.c3_btn"><b>↗</b>View on GitHub</a></p>
           </div>
           <dl>
-            <div><dt class="mono">Problem</dt><dd>Production hosting that is repeatable, observable and recoverable.</dd></div>
-            <div><dt class="mono">Build</dt><dd>Full-stack deployment automated with Bicep, Bash and GitHub Actions: custom domain, DNS, secrets in Key Vault, backups and monitoring.</dd></div>
-            <div><dt class="mono">Outcome</dt><dd>High-availability hosting with disaster recovery, redeployable from code.</dd></div>
+            <div><dt class="mono" data-i18n="work.problem_label">Problem</dt><dd data-i18n="work.c3_problem">Production hosting that is repeatable, observable and recoverable.</dd></div>
+            <div><dt class="mono" data-i18n="work.build_label">Build</dt><dd data-i18n="work.c3_build">Full-stack deployment automated with Bicep, Bash and GitHub Actions: custom domain, DNS, secrets in Key Vault, backups and monitoring.</dd></div>
+            <div><dt class="mono" data-i18n="work.outcome_label">Outcome</dt><dd data-i18n="work.c3_outcome">High-availability hosting with disaster recovery, redeployable from code.</dd></div>
           </dl>
         </article>
 
         <article class="case rv">
           <div>
-            <span class="mono">04 · Enterprise · eSolutions</span>
-            <h2>Client platforms</h2>
+            <span class="mono" data-i18n="work.c4_tag">04 · Enterprise · eSolutions</span>
+            <h2 data-i18n="work.c4_title">Client platforms</h2>
             <div class="chips"><span>React</span><span>SPFx</span><span>Power Apps</span><span>Power Automate</span><span>Azure DevOps</span></div>
           </div>
           <dl>
-            <div><dt class="mono">Problem</dt><dd>Enterprise clients across Ghana, Kenya and the Ivory Coast needed reliable tools their teams would actually use.</dd></div>
-            <div><dt class="mono">Build</dt><dd>Front-end architecture, automation, and CI/CD with Bicep for App Service and Functions. Features owned from wireframe to production monitoring.</dd></div>
-            <div><dt class="mono">Outcome</dt><dd>30% internal productivity gain and 500+ users trained to adopt new platforms.</dd></div>
+            <div><dt class="mono" data-i18n="work.problem_label">Problem</dt><dd data-i18n="work.c4_problem">Enterprise clients across Ghana, Kenya and the Ivory Coast needed reliable tools their teams would actually use.</dd></div>
+            <div><dt class="mono" data-i18n="work.build_label">Build</dt><dd data-i18n="work.c4_build">Front-end architecture, automation, and CI/CD with Bicep for App Service and Functions. Features owned from wireframe to production monitoring.</dd></div>
+            <div><dt class="mono" data-i18n="work.outcome_label">Outcome</dt><dd data-i18n="work.c4_outcome">30% internal productivity gain and 500+ users trained to adopt new platforms.</dd></div>
           </dl>
         </article>
       </div>
 
       <div class="cta cta-sm rv" style="margin:70px 0 90px">
-        <span class="mono">● Next case study</span>
-        <h2>Have a problem to solve?<br><span class="a">Let’s build what gets adopted.</span></h2>
-        <a class="btn" href="#contact"><b>↗</b>Contact me</a>
+        <span class="mono" data-i18n="work.cta_label">● Next case study</span>
+        <h2 data-i18n="work.cta_h2">Have a problem to solve?<br><span class="a">Let’s build what gets adopted.</span></h2>
+        <a class="btn" href="#contact" data-i18n="work.cta_btn"><b>↗</b>Contact me</a>
       </div>
     </div>
   </main>
@@ -355,82 +370,79 @@
     <!-- VIEW: ABOUT -->
   <main class="view" id="about">
     <div class="wrap">
-      <div class="mono">● About</div>
-      <h2 class="h2">Engineer who sits<br>between the code<br><span class="a">and the customer.</span></h2>
+      <div class="mono" data-i18n="about.label">● About</div>
+      <h2 class="h2" data-i18n="about.h2">Engineer who sits<br>between the code<br><span class="a">and the customer.</span></h2>
 
       <div class="ab-g">
         <div class="ab-tl">
           <article class="ab-ch rv" data-l="The screen">
             <span class="ab-num" aria-hidden="true">01</span>
-            <span class="mono">The screen</span>
-            <h3>I started where users start: the screen.</h3>
-            <p>I was obsessed with how software feels, the small details that make an interface feel right.</p>
+            <span class="mono" data-i18n="about.ch1_label">The screen</span>
+            <h3 data-i18n="about.ch1_title">I started where users start: the screen.</h3>
+            <p data-i18n="about.ch1_desc">I was obsessed with how software feels, the small details that make an interface feel right.</p>
           </article>
           <article class="ab-ch rv" data-l="The break">
             <span class="ab-num" aria-hidden="true">02</span>
-            <span class="mono">The break</span>
-             <h3>Then consulting showed me where good software fails. <span class="a">Not in the code.</span></h3>
-            <p>In deployment, in access, and in whether the people it was built for ever used it.</p>
+            <span class="mono" data-i18n="about.ch2_label">The break</span>
+            <h3 data-i18n="about.ch2_title">Then consulting showed me where good software fails. <span class="a">Not in the code.</span></h3>
+            <p data-i18n="about.ch2_desc">In deployment, in access, and in whether the people it was built for ever used it.</p>
           </article>
           <article class="ab-ch rv" data-l="The whole path">
             <span class="ab-num" aria-hidden="true">03</span>
-            <span class="mono">The whole path</span>
-            <h3>So I learned all of it.</h3>
-            <p>I design the interface, wire the pipeline, provision the infrastructure and train the team who will use it. Same job, different layers. <a href="#certs">See the certifications →</a></p>
+            <span class="mono" data-i18n="about.ch3_label">The whole path</span>
+            <h3 data-i18n="about.ch3_title">So I learned all of it.</h3>
+            <p data-i18n="about.ch3_desc">I design the interface, wire the pipeline, provision the infrastructure and train the team who will use it. Same job, different layers. <a href="#certs">See the certifications →</a></p>
           </article>
         </div>
 
         <aside class="ab-side" aria-hidden="true">
           <div class="ab-eclipse"><span class="ab-orb"></span><span class="ab-sun"></span><span class="ab-moon"></span></div>
           <div class="ab-cap">
-            <span class="mono">Chapter <b id="ab-cn">01</b> of 03</span>
+            <span class="mono"><span data-i18n="about.chapter_prefix">Chapter</span> <b id="ab-cn">01</b> <span data-i18n="about.chapter_of">of</span> 03</span>
             <div id="ab-cl">The screen</div>
           </div>
         </aside>
       </div>
 
-      
-
       <div class="row rv">
-        <span class="mono">Principles</span>
+        <span class="mono" data-i18n="about.principles_label">Principles</span>
         <div class="grid3" style="margin:0">
-          <div class="card"><h3>Ownership</h3><p>Wireframe to production monitoring. I stay with it.</p></div>
-          <div class="card"><h3>Small iterations</h3><p>Ship small, learn fast, compound.</p></div>
-          <div class="card hot"><h3>Adoption first</h3><p>If people don’t use it, it didn’t ship.</p></div>
+          <div class="card"><h3 data-i18n="about.p1_title">Ownership</h3><p data-i18n="about.p1_desc">Wireframe to production monitoring. I stay with it.</p></div>
+          <div class="card"><h3 data-i18n="about.p2_title">Small iterations</h3><p data-i18n="about.p2_desc">Ship small, learn fast, compound.</p></div>
+          <div class="card hot"><h3 data-i18n="about.p3_title">Adoption first</h3><p data-i18n="about.p3_desc">If people don’t use it, it didn’t ship.</p></div>
         </div>
       </div>
       <div class="row rv">
-        <span class="mono">Education</span>
-        <div>BSc Information Technology, BluCrest College · 2019 to 2023</div>
+        <span class="mono" data-i18n="about.edu_label">Education</span>
+        <div data-i18n="about.edu_val">BSc Information Technology, BluCrest College · 2019 to 2023</div>
       </div>
       <div class="row rv">
-        <span class="mono">Curriculum Vitae</span>
+        <span class="mono" data-i18n="about.cv_label">Curriculum Vitae</span>
         <div>
-          <p style="margin:0 0 16px;color:#b3b3ba;max-width:540px">
+          <p style="margin:0 0 16px;color:#b3b3ba;max-width:540px" data-i18n="about.cv_desc">
             Verified credentials, enterprise project delivery, and engineering leadership across cloud, web, and internal platforms.
           </p>
-          <a class="btn ghost" href="files/Telvin_Caesar_Varfley_CV.pdf" download="Telvin_Caesar_Varfley_CV.pdf" target="_blank" rel="noopener"><b>↓</b>Download CV (PDF)</a>
+          <a class="btn ghost" href="files/Telvin_Caesar_Varfley_CV.pdf" download="Telvin_Caesar_Varfley_CV.pdf" target="_blank" rel="noopener" data-i18n="about.cv_btn"><b>↓</b>Download CV (PDF)</a>
         </div>
       </div>
 
       <div class="cta cta-sm rv" style="margin-top:60px">
-        <span class="mono">● Start a project</span>
-        <h2>Have an idea?<br><span class="a">Let’s build it.</span></h2>
+        <span class="mono" data-i18n="about.cta_label">● Start a project</span>
+        <h2 data-i18n="about.cta_h2">Have an idea?<br><span class="a">Let’s build it.</span></h2>
         <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-          <a class="btn" href="#contact"><b>↗</b>Contact me</a>
-          <a class="btn ghost" href="files/Telvin_Caesar_Varfley_CV.pdf" download="Telvin_Caesar_Varfley_CV.pdf" target="_blank" rel="noopener"><b>↓</b>Download CV</a>
+          <a class="btn" href="#contact" data-i18n="about.cta_btn"><b>↗</b>Contact me</a>
+          <a class="btn ghost" href="files/Telvin_Caesar_Varfley_CV.pdf" download="Telvin_Caesar_Varfley_CV.pdf" target="_blank" rel="noopener" data-i18n="about.cta_cv_btn"><b>↓</b>Download CV</a>
         </div>
       </div>
     </div>
   </main>
 
   <!-- VIEW: EXPERTISE -->
-  <!-- VIEW: EXPERTISE -->
   <main class="view" id="expertise">
     <div class="wrap">
-      <div class="mono">● Expertise</div>
-      <h2 class="h2">One engineer.<br><span class="a">Many layers.</span></h2>
-      <p class="lede xp-lede rv">One person across the whole path, so nothing falls between the layers.</p>
+      <div class="mono" data-i18n="xp.label">● Expertise</div>
+      <h2 class="h2" data-i18n="xp.h2">One engineer.<br><span class="a">Many layers.</span></h2>
+      <p class="lede xp-lede rv" data-i18n="xp.lede">One person across the whole path, so nothing falls between the layers.</p>
 
       <div class="xs-layout">
         <aside class="xs-side">
@@ -446,42 +458,42 @@
 
         <div class="xs-list">
           <div class="xs-row on">
-            <h3 class="xs-hd"><button type="button" class="xs-rh" id="xs-h-0" aria-expanded="true" aria-controls="xs-b-0"><span class="xs-n">01</span><span class="xs-title">Front-end</span><span class="xs-pl" aria-hidden="true"></span></button></h3>
+            <h3 class="xs-hd"><button type="button" class="xs-rh" id="xs-h-0" aria-expanded="true" aria-controls="xs-b-0"><span class="xs-n">01</span><span class="xs-title" data-i18n="xp.l1_name">Front-end</span><span class="xs-pl" aria-hidden="true"></span></button></h3>
             <div class="xs-rb" id="xs-b-0" role="region" aria-labelledby="xs-h-0"><div><div class="xs-rbi">
-              <p class="xs-t">Interfaces people choose to use</p>
-              <p>React and TypeScript front-ends built for speed and clarity, from the first wireframe.</p>
+              <p class="xs-t" data-i18n="xp.l1_tagline">Interfaces people choose to use</p>
+              <p data-i18n="xp.l1_desc">React and TypeScript front-ends built for speed and clarity, from the first wireframe.</p>
               <div class="chips"><span>React</span><span>TypeScript</span><span>JavaScript</span><span>HTML</span><span>Sass</span><span>jQuery</span><span>Vite</span><span>TanStack Query</span><span>SPFx</span><span>SharePoint</span><span>Figma</span><span>PWA</span></div>
-              <p class="xs-proof">Clean UI and fast loading times with best UX practices. <a href="https://www.wikora.online/" target="_blank" rel="noopener">See Wikora ↗</a></p>
+              <p class="xs-proof" data-i18n="xp.l1_proof">Clean UI and fast loading times with best UX practices. <a href="https://www.wikora.online/" target="_blank" rel="noopener">See Wikora ↗</a></p>
             </div></div></div>
           </div>
 
           <div class="xs-row">
-            <h3 class="xs-hd"><button type="button" class="xs-rh" id="xs-h-1" aria-expanded="false" aria-controls="xs-b-1"><span class="xs-n">02</span><span class="xs-title">Back-end &amp; data</span><span class="xs-pl" aria-hidden="true"></span></button></h3>
+            <h3 class="xs-hd"><button type="button" class="xs-rh" id="xs-h-1" aria-expanded="false" aria-controls="xs-b-1"><span class="xs-n">02</span><span class="xs-title" data-i18n="xp.l2_name">Back-end &amp; data</span><span class="xs-pl" aria-hidden="true"></span></button></h3>
             <div class="xs-rb" id="xs-b-1" role="region" aria-labelledby="xs-h-1"><div><div class="xs-rbi">
-              <p class="xs-t">Data that stays organised and secure</p>
-              <p>APIs and databases designed around proper access controls and data governance.</p>
+              <p class="xs-t" data-i18n="xp.l2_tagline">Data that stays organised and secure</p>
+              <p data-i18n="xp.l2_desc">APIs and databases designed around proper access controls and data governance.</p>
               <div class="chips"><span>Azure SQL</span><span>PostgreSQL</span><span>MongoDB</span><span>MySQL</span><span>Firestore</span><span>Firebase Auth</span><span>Appwrite</span><span>MERN stack APIs</span><span>SQL</span><span>NoSQL</span></div>
-              <p class="xs-proof">Role-based access and organisation-scoped data in Wikora. <a href="#work">See the case ↗</a></p>
+              <p class="xs-proof" data-i18n="xp.l2_proof">Role-based access and organisation-scoped data in Wikora. <a href="#work">See the case ↗</a></p>
             </div></div></div>
           </div>
 
           <div class="xs-row">
-            <h3 class="xs-hd"><button type="button" class="xs-rh" id="xs-h-2" aria-expanded="false" aria-controls="xs-b-2"><span class="xs-n">03</span><span class="xs-title">Cloud &amp; DevOps</span><span class="xs-pl" aria-hidden="true"></span></button></h3>
+            <h3 class="xs-hd"><button type="button" class="xs-rh" id="xs-h-2" aria-expanded="false" aria-controls="xs-b-2"><span class="xs-n">03</span><span class="xs-title" data-i18n="xp.l3_name">Cloud &amp; DevOps</span><span class="xs-pl" aria-hidden="true"></span></button></h3>
             <div class="xs-rb" id="xs-b-2" role="region" aria-labelledby="xs-h-2"><div><div class="xs-rbi">
-              <p class="xs-t">Infrastructure that rebuilds from code</p>
-              <p>Azure and Google Cloud environments defined in Bicep/Terraform and shipped through automated pipelines.</p>
+              <p class="xs-t" data-i18n="xp.l3_tagline">Infrastructure that rebuilds from code</p>
+              <p data-i18n="xp.l3_desc">Azure and Google Cloud environments defined in Bicep/Terraform and shipped through automated pipelines.</p>
               <div class="chips"><span>Azure</span><span>App Service</span><span>Azure Functions</span><span>Key Vault</span><span>Log Analytics</span><span>Bicep</span><span>Terraform</span><span>Azure DevOps</span><span>GitHub Actions</span><span>Git</span><span>Bash</span><span>Google Cloud</span><span>Firebase</span><span>Azure Virtual Desktop</span></div>
-              <p class="xs-proof">High-availability WordPress hosting, redeployable from code. <a href="https://github.com/HakzTV/WordPress-on-Azure" target="_blank" rel="noopener">See the repo ↗</a></p>
+              <p class="xs-proof" data-i18n="xp.l3_proof">High-availability WordPress hosting, redeployable from code. <a href="https://github.com/HakzTV/WordPress-on-Azure" target="_blank" rel="noopener">See the repo ↗</a></p>
             </div></div></div>
           </div>
 
           <div class="xs-row">
-            <h3 class="xs-hd"><button type="button" class="xs-rh" id="xs-h-3" aria-expanded="false" aria-controls="xs-b-3"><span class="xs-n">04</span><span class="xs-title">Platform &amp; delivery</span><span class="xs-pl" aria-hidden="true"></span></button></h3>
+            <h3 class="xs-hd"><button type="button" class="xs-rh" id="xs-h-3" aria-expanded="false" aria-controls="xs-b-3"><span class="xs-n">04</span><span class="xs-title" data-i18n="xp.l4_name">Platform &amp; delivery</span><span class="xs-pl" aria-hidden="true"></span></button></h3>
             <div class="xs-rb" id="xs-b-3" role="region" aria-labelledby="xs-h-3"><div><div class="xs-rbi">
-              <p class="xs-t">Systems your team actually uses</p>
-              <p>Automate processes, ship the platform, then train the team so the tools are in use after launch.</p>
+              <p class="xs-t" data-i18n="xp.l4_tagline">Systems your team actually uses</p>
+              <p data-i18n="xp.l4_desc">Automate processes, ship the platform, then train the team so the tools are in use after launch.</p>
               <div class="chips"><span>Power Apps</span><span>Power Automate</span><span>Azure Boards</span><span>Planner</span><span>User training</span></div>
-              <p class="xs-proof">30% productivity gain and 500+ users trained at eSolutions.</p>
+              <p class="xs-proof" data-i18n="xp.l4_proof">30% productivity gain and 500+ users trained at eSolutions.</p>
             </div></div></div>
           </div>
         </div>
@@ -489,27 +501,27 @@
 
       <div class="xs-rib" id="xs-rib" aria-hidden="true"></div>
 
-      <div class="mono" style="margin:80px 0 0">● How I work</div>
+      <div class="mono" style="margin:80px 0 0" data-i18n="xp.flow_label">● How I work</div>
       <div class="xp-flow rv">
-        <div><span class="mono">01</span><h3>Wireframe</h3><p>Shape the idea with you before any code.</p></div>
-        <div><span class="mono">02</span><h3>Build</h3><p>Ship in small iterations and learn fast.</p></div>
-        <div><span class="mono">03</span><h3>Ship</h3><p>Deploy through automated pipelines.</p></div>
-        <div><span class="mono">04</span><h3>Monitor</h3><p>Stay with it in production.</p></div>
+        <div><span class="mono">01</span><h3 data-i18n="xp.f1_title">Wireframe</h3><p data-i18n="xp.f1_desc">Shape the idea with you before any code.</p></div>
+        <div><span class="mono">02</span><h3 data-i18n="xp.f2_title">Build</h3><p data-i18n="xp.f2_desc">Ship in small iterations and learn fast.</p></div>
+        <div><span class="mono">03</span><h3 data-i18n="xp.f3_title">Ship</h3><p data-i18n="xp.f3_desc">Deploy through automated pipelines.</p></div>
+        <div><span class="mono">04</span><h3 data-i18n="xp.f4_title">Monitor</h3><p data-i18n="xp.f4_desc">Stay with it in production.</p></div>
       </div>
 
-      <div class="mono" style="margin:80px 0 0">● Ways to work together</div>
+      <div class="mono" style="margin:80px 0 0" data-i18n="xp.ways_label">● Ways to work together</div>
       <div class="grid3" style="margin-top:20px">
-        <div class="card rv"><span class="mono">Advise</span><h3>Cloud consulting</h3><p>Architecture review, Azure and GCP guidance, delivery pipelines.</p></div>
-        <div class="card hot rv"><span class="mono">Build</span><h3>Product engineering</h3><p>Front-end or full-stack SaaS, from your idea to deployment.</p></div>
-        <div class="card rv"><span class="mono">Enable</span><h3>Adoption &amp; training</h3><p>Onboarding teams onto new platforms so they stick.</p></div>
+        <div class="card rv"><span class="mono" data-i18n="xp.w1_badge">Advise</span><h3 data-i18n="xp.w1_title">Cloud consulting</h3><p data-i18n="xp.w1_desc">Architecture review, Azure and GCP guidance, delivery pipelines.</p></div>
+        <div class="card hot rv"><span class="mono" data-i18n="xp.w2_badge">Build</span><h3 data-i18n="xp.w2_title">Product engineering</h3><p data-i18n="xp.w2_desc">Front-end or full-stack SaaS, from your idea to deployment.</p></div>
+        <div class="card rv"><span class="mono" data-i18n="xp.w3_badge">Enable</span><h3 data-i18n="xp.w3_title">Adoption &amp; training</h3><p data-i18n="xp.w3_desc">Onboarding teams onto new platforms so they stick.</p></div>
       </div>
 
-      <p class="mono" style="margin:50px 0 0">● Certified across Azure · <a href="#certs" style="color:var(--ember)">5 certifications →</a></p>
+      <p class="mono" style="margin:50px 0 0" data-i18n="xp.cert_note">● Certified across Azure · <a href="#certs" style="color:var(--ember)">5 certifications →</a></p>
 
       <div class="cta cta-sm rv" style="margin:50px 0 90px">
-        <span class="mono">● Work with me</span>
-        <h2>Not sure where to start?<br><span class="a">Tell me what you need.</span></h2>
-        <a class="btn" href="#contact"><b>↗</b>Contact me</a>
+        <span class="mono" data-i18n="xp.cta_label">● Work with me</span>
+        <h2 data-i18n="xp.cta_h2">Not sure where to start?<br><span class="a">Tell me what you need.</span></h2>
+        <a class="btn" href="#contact" data-i18n="xp.cta_btn"><b>↗</b>Contact me</a>
       </div>
     </div>
   </main>
@@ -517,9 +529,9 @@
   <!-- VIEW: CERTS -->
   <main class="view" id="certs">
     <div class="wrap">
-      <div class="mono">● Certifications</div>
-      <h2 class="h2">Five certs.<br><span class="a">One path.</span></h2>
-      <p class="lede rv" style="max-width:720px;margin-top:30px">Fundamentals, administration, architecture, DevOps, then a specialty. Each one maps to work I do for clients.</p>
+      <div class="mono" data-i18n="certs.label">● Certifications</div>
+      <h2 class="h2" data-i18n="certs.h2">Five certs.<br><span class="a">One path.</span></h2>
+      <p class="lede rv" style="max-width:720px;margin-top:30px" data-i18n="certs.lede">Fundamentals, administration, architecture, DevOps, then a specialty. Each one maps to work I do for clients.</p>
       <div class="cert-list" style="margin-top:50px">
         <div class="cert-row rv">
           <div class="cert-badge">
@@ -528,7 +540,7 @@
           <div class="cert-info">
             <span class="mono">AZ-900 · 01</span>
             <h3>Azure Fundamentals</h3>
-            <p>Core cloud concepts and Azure services. The shared language of every cloud conversation.</p>
+            <p data-i18n="certs.c1_desc">Core cloud concepts and Azure services. The shared language of every cloud conversation.</p>
           </div>
         </div>
         <div class="cert-row rv">
@@ -538,7 +550,7 @@
           <div class="cert-info">
             <span class="mono">AZ-104 · 02</span>
             <h3>Azure Administrator Associate</h3>
-            <p>Running Azure day to day: identity, networking, storage, compute and monitoring.</p>
+            <p data-i18n="certs.c2_desc">Running Azure day to day: identity, networking, storage, compute and monitoring.</p>
           </div>
         </div>
         <div class="cert-row rv">
@@ -548,7 +560,7 @@
           <div class="cert-info">
             <span class="mono">AZ-305 · 03</span>
             <h3>Azure Solutions Architect Expert</h3>
-            <p>Designing Azure solutions around security, resilience and cost. Applied in the WordPress on Azure project.</p>
+            <p data-i18n="certs.c3_desc">Designing Azure solutions around security, resilience and cost. Applied in the WordPress on Azure project.</p>
           </div>
         </div>
         <div class="cert-row rv">
@@ -558,7 +570,7 @@
           <div class="cert-info">
             <span class="mono">AZ-400 · 04</span>
             <h3>DevOps Engineer Expert</h3>
-            <p>Delivery pipelines, infrastructure as code and release strategy. Applied daily with Azure DevOps and Bicep.</p>
+            <p data-i18n="certs.c4_desc">Delivery pipelines, infrastructure as code and release strategy. Applied daily with Azure DevOps and Bicep.</p>
           </div>
         </div>
         <div class="cert-row rv">
@@ -568,14 +580,14 @@
           <div class="cert-info">
             <span class="mono">AZ-140 · 05</span>
             <h3>Azure Virtual Desktop Specialty</h3>
-            <p>Deploying and managing virtual desktops on Azure.</p>
+            <p data-i18n="certs.c5_desc">Deploying and managing virtual desktops on Azure.</p>
           </div>
         </div>
       </div>
       <div class="cta rv" style="margin-top:60px">
-        <span class="mono">● Need this applied to your cloud?</span>
-        <h2>Let’s talk<br><span class="a">architecture.</span></h2>
-        <a class="btn" href="#contact"><b>↗</b>Contact me</a>
+        <span class="mono" data-i18n="certs.cta_label">● Need this applied to your cloud?</span>
+        <h2 data-i18n="certs.cta_h2">Let’s talk<br><span class="a">architecture.</span></h2>
+        <a class="btn" href="#contact" data-i18n="certs.cta_btn"><b>↗</b>Contact me</a>
       </div>
     </div>
   </main>
@@ -583,14 +595,14 @@
   <!-- VIEW: SYSTEM -->
   <main class="view" id="system">
     <div class="wrap">
-      <div class="mono">● Design system v1.0</div>
-      <h2 class="h2">Editorial.<br><span class="a">Engineered.</span></h2>
+      <div class="mono" data-i18n="sys.label">● Design system v1.0</div>
+      <h2 class="h2" data-i18n="sys.h2">Editorial.<br><span class="a">Engineered.</span></h2>
       <div class="row" style="margin-top:60px">
-        <span class="mono">Principle</span>
-        <p style="margin:0;font-size:22px;letter-spacing:-.02em">Monochrome does the talking. One ember accent marks every action. Mono labels annotate like an engineer’s drawing.</p>
+        <span class="mono" data-i18n="sys.principle_label">Principle</span>
+        <p style="margin:0;font-size:22px;letter-spacing:-.02em" data-i18n="sys.principle_desc">Monochrome does the talking. One ember accent marks every action. Mono labels annotate like an engineer’s drawing.</p>
       </div>
       <div class="row">
-        <span class="mono">Colour</span>
+        <span class="mono" data-i18n="sys.colour_label">Colour</span>
         <div class="sw">
           <div style="background:#0b0b0c">ink<br>#0B0B0C</div>
           <div style="background:#141416">ink-2<br>#141416</div>
@@ -601,7 +613,7 @@
         </div>
       </div>
       <div class="row">
-        <span class="mono">Type</span>
+        <span class="mono" data-i18n="sys.type_label">Type</span>
         <div>
           <div class="mono">Display · Inter Tight 600 · -5.5% tracking</div>
           <div style="font-size:72px;letter-spacing:-.05em;line-height:1;font-weight:600;margin:8px 0 20px">Aa Build</div>
@@ -609,20 +621,20 @@
         </div>
       </div>
       <div class="row">
-        <span class="mono">Actions</span>
+        <span class="mono" data-i18n="sys.actions_label">Actions</span>
         <div style="display:flex;gap:14px;flex-wrap:wrap">
-          <a class="btn" href="#system"><b>→</b>Primary</a>
-          <a class="btn ghost" href="#system"><b>↗</b>Secondary</a>
-          <span class="tag mono"><i class="dot"></i>Status tag</span>
+          <a class="btn" href="#system" data-i18n="sys.act_primary"><b>→</b>Primary</a>
+          <a class="btn ghost" href="#system" data-i18n="sys.act_secondary"><b>↗</b>Secondary</a>
+          <span class="tag mono" data-i18n="sys.act_tag"><i class="dot"></i>Status tag</span>
         </div>
       </div>
       <div class="row">
-        <span class="mono">Shape &amp; space</span>
-        <p style="margin:0;color:#b3b3ba">Cards 18px radius, pills for actions, 8px base grid, 110px section rhythm, 1px hairlines in #2A2A2E.</p>
+        <span class="mono" data-i18n="sys.shape_label">Shape &amp; space</span>
+        <p style="margin:0;color:#b3b3ba" data-i18n="sys.shape_desc">Cards 18px radius, pills for actions, 8px base grid, 110px section rhythm, 1px hairlines in #2A2A2E.</p>
       </div>
       <div class="row" style="padding-bottom:100px">
-        <span class="mono">Motion</span>
-        <p style="margin:0;color:#b3b3ba">Ease-out 0.35 to 0.8s. Reveal on scroll, lift on hover, arrow rotates on press. Reduced-motion respected.</p>
+        <span class="mono" data-i18n="sys.motion_label">Motion</span>
+        <p style="margin:0;color:#b3b3ba" data-i18n="sys.motion_desc">Ease-out 0.35 to 0.8s. Reveal on scroll, lift on hover, arrow rotates on press. Reduced-motion respected.</p>
       </div>
     </div>
   </main>
@@ -630,24 +642,24 @@
   <!-- VIEW: CONTACT -->
   <main class="view" id="contact">
     <div class="wrap">
-      <div class="mono">● Contact</div>
-      <h2 class="h2">Let’s build<br><span class="a">your idea.</span></h2>
+      <div class="mono" data-i18n="contact.label">● Contact</div>
+      <h2 class="h2" data-i18n="contact.h2">Let’s build<br><span class="a">your idea.</span></h2>
       <div class="ct">
         <form id="f" novalidate>
-          <label><span class="mono">Name</span><input id="n" name="name" required></label>
-          <label><span class="mono">Email</span><input id="e" name="email" type="email" required></label>
+          <label><span class="mono" data-i18n="contact.name_label">Name</span><input id="n" name="name" required></label>
+          <label><span class="mono" data-i18n="contact.email_label">Email</span><input id="e" name="email" type="email" required></label>
           <label>
-            <span class="mono">I need</span>
+            <span class="mono" data-i18n="contact.need_label">I need</span>
             <select id="t" name="interest">
-              <option>Cloud consulting</option>
-              <option>Product engineering</option>
-              <option>Training &amp; adoption</option>
-              <option>Something else</option>
+              <option data-i18n="contact.opt_cloud">Cloud consulting</option>
+              <option data-i18n="contact.opt_product">Product engineering</option>
+              <option data-i18n="contact.opt_training">Training &amp; adoption</option>
+              <option data-i18n="contact.opt_other">Something else</option>
             </select>
           </label>
-          <label><span class="mono">Message</span><textarea id="m" name="message" rows="5" required></textarea></label>
+          <label><span class="mono" data-i18n="contact.msg_label">Message</span><textarea id="m" name="message" rows="5" required></textarea></label>
           <div class="form-status" id="fs" aria-live="polite" hidden></div>
-          <button class="btn" id="fsb" type="submit"><b>↗</b>Send message</button>
+          <button class="btn" id="fsb" type="submit" data-i18n="contact.submit_btn"><b>↗</b>Send message</button>
         </form>
       </div>
     </div>
@@ -658,9 +670,9 @@
     <div class="wrap">
       <section class="mapcard">
         <div>
-          <span class="mono">● Reach</span>
-          <h2>Built in Accra.<br><span class="a">Delivered across the world.</span></h2>
-          <p>Enterprise platforms and products for clients across four continents.</p>
+          <span class="mono" data-i18n="footer.map_label">● Reach</span>
+          <h2 data-i18n="footer.map_h2">Built in Accra.<br><span class="a">Delivered across the world.</span></h2>
+          <p data-i18n="footer.map_desc">Enterprise platforms and products for clients across four continents.</p>
         </div>
         <canvas id="globe" role="img" aria-label="Dotted world map with glowing markers on nine countries across four continents"></canvas>
       </section>
@@ -672,36 +684,36 @@
             <span class="rl" aria-hidden="true"></span>
             Telvin Varfley
           </a>
-          <p>Software engineer and Azure architect. Cloud-native products that teams actually adopt.</p>
-          <span class="mono"><i class="dot"></i>Accra, Ghana · <span id="clk"></span></span>
+          <p data-i18n="footer.brand_p">Software engineer and Azure architect. Cloud-native products that teams actually adopt.</p>
+          <span class="mono"><i class="dot"></i><span data-i18n="footer.location">Accra, Ghana</span> · <span id="clk"></span></span>
         </div>
         <div>
-          <span class="mono">Pages</span>
-          <a href="#home">Home</a>
-          <a href="#work">Work</a>
-          <a href="#about">About</a>
-          <a href="#expertise">Expertise</a>
-          <a href="#certs">Certs</a>
-          <a href="#contact">Contact</a>
+          <span class="mono" data-i18n="footer.pages_label">Pages</span>
+          <a href="#home" data-i18n="nav.home">Home</a>
+          <a href="#work" data-i18n="nav.work">Work</a>
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#expertise" data-i18n="nav.expertise">Expertise</a>
+          <a href="#certs" data-i18n="nav.certs">Certs</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
         </div>
         <div>
-          <span class="mono">Selected work</span>
+          <span class="mono" data-i18n="footer.work_label">Selected work</span>
           <a href="https://www.wikora.online/" target="_blank" rel="noopener">Wikora ↗</a>
           <a href="https://expensetracker-67f1d.web.app/login" target="_blank" rel="noopener">WeTrack ↗</a>
           <a href="https://github.com/HakzTV/WordPress-on-Azure" target="_blank" rel="noopener">WordPress on Azure</a>
           <a href="#system">Design system</a>
-          <a href="files/Telvin_Caesar_Varfley_CV.pdf" download="Telvin_Caesar_Varfley_CV.pdf" target="_blank" rel="noopener">Download CV (PDF) ↗</a>
+          <a href="files/Telvin_Caesar_Varfley_CV.pdf" download="Telvin_Caesar_Varfley_CV.pdf" target="_blank" rel="noopener" data-i18n="footer.cv_link">Download CV (PDF) ↗</a>
         </div>
       </div>
 
       <div class="ft-rule">
         <span></span>
-        <a class="btn" href="#contact"><b>↗</b>Contact me</a>
+        <a class="btn" href="#contact" data-i18n="home.cta_btn"><b>↗</b>Contact me</a>
       </div>
 
       <div class="ft-bot">
         <span class="mono">© 2026 Telvin Caesar Varfley</span>
-        <button class="mono toplink" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top ↑</button>
+        <button class="mono toplink" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})" data-i18n="footer.back_top">Back to top ↑</button>
       </div>
 
       <div class="ft-word" aria-hidden="true">Telvin Varfley</div>
@@ -710,6 +722,7 @@
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="js/i18n.js"></script>
   <script src="js/splash.js"></script>
   <script src="js/router.js"></script>
   <script src="js/hero.js"></script>

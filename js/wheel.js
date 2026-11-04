@@ -6,13 +6,17 @@
   var wheel = document.getElementById('wheel');
   if (!wheel) return;
 
-  var vals = [
-    ['Honest advice', '01 · HONESTY', 'I hear the idea first. If I think it won’t work, I say so calmly and explain why.'],
-    ['Vision first', '02 · CLARITY', 'I don’t build until I understand most of what the client truly sees in their head.'],
-    ['Only what you need', '03 · FIT', 'Most small businesses don’t need a full suite. I build the one module that matters.'],
-    ['Transparency', '04 · TRUST', 'I build systems that make the truth easy to see, so nobody has to guess.'],
-    ['Ownership', '05 · FOLLOW-THROUGH', 'From wireframe to production monitoring, I stay with it.']
-  ];
+  function getVals() {
+    return (window.tvI18n && window.tvI18n.getWheelValues) ? window.tvI18n.getWheelValues() : [
+      ['Honest advice', '01 · HONESTY', 'I hear the idea first. If I think it won’t work, I say so calmly and explain why.'],
+      ['Vision first', '02 · CLARITY', 'I don’t build until I understand most of what the client truly sees in their head.'],
+      ['Only what you need', '03 · FIT', 'Most small businesses don’t need a full suite. I build the one module that matters.'],
+      ['Transparency', '04 · TRUST', 'I build systems that make the truth easy to see, so nobody has to guess.'],
+      ['Ownership', '05 · FOLLOW-THROUGH', 'From wireframe to production monitoring, I stay with it.']
+    ];
+  }
+
+  var vals = getVals();
 
   var vcur = -1,
       cap = document.getElementById('vcap'),
@@ -23,10 +27,12 @@
       reducedMotion = window.matchMedia('(prefers-reduced-motion:reduce)').matches,
       home = document.getElementById('home');
 
-  function setVal(v) {
-    if (v === vcur || !cap) return;
+  function setVal(v, force) {
+    if ((v === vcur && !force) || !cap) return;
     vcur = v;
+    vals = getVals();
     var c = vals[v];
+    if (!c) return;
     cap.innerHTML = '<span class="mono">' + c[1] + '</span><h3>' + c[0] + '</h3><p>' + c[2] + '</p>';
     cap.classList.remove('vin');
     void cap.offsetWidth;
@@ -117,6 +123,19 @@
     }
     requestAnimationFrame(tick);
   }
+
+  window.addEventListener('tv:langchange', function() {
+    vals = getVals();
+    cards.forEach(function(d) {
+      var v = +d.getAttribute('data-v');
+      var c = vals[v];
+      if (c) {
+        d.innerHTML = c[0] + '<small>' + c[1] + '</small>';
+        d.setAttribute('aria-label', c[0] + ' - ' + c[1]);
+      }
+    });
+    if (vcur >= 0) setVal(vcur, true);
+  });
 
   draw();
   if (!reducedMotion) {
