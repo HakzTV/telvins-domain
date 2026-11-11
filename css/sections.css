@@ -521,6 +521,19 @@
   justify-self: start;
 }
 
+.ct-payment {
+  display: grid;
+  justify-items: start;
+  gap: 14px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.ct-payment p {
+  max-width: 580px;
+  margin: 0;
+}
+
 /* Form status feedback — design-system tokens */
 .form-status {
   grid-column: 1 / -1;

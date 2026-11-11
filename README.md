@@ -13,7 +13,7 @@ Live site: [telvins-domain](https://telvinvarfley.com/)
 | Markup | Vanilla HTML5 |
 | Styles | Modular CSS (custom design system — `css/variables.css`) |
 | Scripts | Vanilla JS (no frameworks) |
-| Contact | [Formspree](https://formspree.io) |
+| Contact | [Formspree](https://formspree.io) for inquiries; [Paystack](https://paystack.shop/pay/40f1e5uao4) for fixed-price consultations (GHS 500) |
 | Hosting | GitHub Pages |
 
 ---

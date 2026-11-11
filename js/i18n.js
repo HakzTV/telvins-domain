@@ -240,6 +240,9 @@
       'contact.msg_label': 'Message',
       'contact.submit_btn': '<b>↗</b>Send message',
       'contact.sending': '<b>·</b>Sending...',
+      'contact.payment_label': '● Paid consultation',
+      'contact.payment_desc': 'Fixed consultation fee: GHS 500. Pay securely with Paystack; Apple Pay may be available on supported devices.',
+      'contact.payment_btn': '<b>↗</b>Pay for a consultation',
 
       // Footer
       'footer.map_label': '● Reach',
@@ -486,6 +489,9 @@
       'contact.msg_label': 'Message',
       'contact.submit_btn': '<b>↗</b>Envoyer le message',
       'contact.sending': '<b>·</b>Envoi en cours...',
+      'contact.payment_label': '● Consultation payante',
+      'contact.payment_desc': 'Tarif fixe de consultation : 500 GHS. Payez en toute sécurité via Paystack ; Apple Pay peut être disponible sur les appareils compatibles.',
+      'contact.payment_btn': '<b>↗</b>Payer une consultation',
 
       // Footer
       'footer.map_label': '● Rayonnement',
