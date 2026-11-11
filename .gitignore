@@ -25,3 +25,4 @@ build/
 # Environment / secrets
 .env
 .env.*
+client-design-scope-intake.md
