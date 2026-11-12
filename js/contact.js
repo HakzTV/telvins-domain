@@ -3,6 +3,51 @@
  * Endpoint: https://formspree.io/f/xgaapvor
  */
 (function () {
+  var chooser = document.getElementById('contactChooser');
+  var choiceButtons = document.querySelectorAll('[data-contact-choice]');
+  var panels = document.querySelectorAll('[data-contact-panel]');
+  var activeChoice = null;
+
+  function showPanel(button) {
+    var panelId = button.getAttribute('aria-controls');
+    var panel = document.getElementById(panelId);
+
+    if (!panel) return;
+
+    activeChoice = button;
+    chooser.hidden = true;
+
+    panels.forEach(function (item) {
+      item.hidden = item !== panel;
+    });
+
+    choiceButtons.forEach(function (item) {
+      item.setAttribute('aria-expanded', item === button ? 'true' : 'false');
+    });
+
+    var heading = panel.querySelector('h3');
+    if (heading) heading.focus();
+  }
+
+  choiceButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      showPanel(button);
+    });
+  });
+
+  document.querySelectorAll('[data-contact-back]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      panels.forEach(function (panel) {
+        panel.hidden = true;
+      });
+      chooser.hidden = false;
+      choiceButtons.forEach(function (choice) {
+        choice.setAttribute('aria-expanded', 'false');
+      });
+      if (activeChoice) activeChoice.focus();
+    });
+  });
+
   var form   = document.getElementById('f');
   var btn    = document.getElementById('fsb');
   var status = document.getElementById('fs');

@@ -643,28 +643,55 @@
     <div class="wrap">
       <div class="mono" data-i18n="contact.label">● Contact</div>
       <h2 class="h2" data-i18n="contact.h2">Let’s build<br><span class="a">your idea.</span></h2>
+      <p class="ct-intro" data-i18n="contact.intro">From the first idea to production, I help teams move their work forward. Choose the next step that fits where you are.</p>
       <div class="ct">
-        <form id="f" novalidate>
-          <label><span class="mono" data-i18n="contact.name_label">Name</span><input id="n" name="name" required></label>
-          <label><span class="mono" data-i18n="contact.email_label">Email</span><input id="e" name="email" type="email" required></label>
-          <label>
-            <span class="mono" data-i18n="contact.need_label">I need</span>
-            <select id="t" name="interest">
-              <option data-i18n="contact.opt_cloud">Cloud consulting</option>
-              <option data-i18n="contact.opt_product">Product engineering</option>
-              <option data-i18n="contact.opt_training">Training &amp; adoption</option>
-              <option data-i18n="contact.opt_other">Something else</option>
-            </select>
-          </label>
-          <label><span class="mono" data-i18n="contact.msg_label">Message</span><textarea id="m" name="message" rows="5" required></textarea></label>
-          <div class="form-status" id="fs" aria-live="polite" hidden></div>
-          <button class="btn" id="fsb" type="submit" data-i18n="contact.submit_btn"><b>↗</b>Send message</button>
-        </form>
-        <div class="ct-payment">
-          <span class="mono" data-i18n="contact.payment_label">● Paid consultation</span>
-          <p data-i18n="contact.payment_desc">Fixed consultation fee: GHS 500. Pay securely with Paystack; Apple Pay may be available on supported devices.</p>
-          <a class="btn ghost" href="https://paystack.shop/pay/40f1e5uao4" target="_blank" rel="noopener noreferrer" data-i18n="contact.payment_btn"><b>↗</b>Pay for a consultation</a>
+        <div class="ct-chooser" id="contactChooser">
+          <div class="ct-choices">
+            <button class="ct-choice" type="button" data-contact-choice aria-controls="messagePanel" aria-expanded="false">
+              <span class="mono" data-i18n="contact.message_choice_label">01 / Start a conversation</span>
+              <strong data-i18n="contact.message_choice_title">Send a message</strong>
+              <span class="ct-choice-desc" data-i18n="contact.message_choice_desc">For a project, collaboration, or a question.</span>
+              <span class="ct-choice-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="ct-choice ct-choice--featured" type="button" data-contact-choice aria-controls="consultationPanel" aria-expanded="false">
+              <span class="mono" data-i18n="contact.booking_choice_label">02 / Get focused advice</span>
+              <strong data-i18n="contact.booking_choice_title">Book a consultation</strong>
+              <span class="ct-choice-desc" data-i18n="contact.booking_choice_desc">Get an expert perspective on your next technical decision.</span>
+              <span class="ct-choice-arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
         </div>
+        <section class="ct-path ct-path--consultation" id="consultationPanel" data-contact-panel hidden aria-labelledby="consultationTitle">
+            <button class="ct-back" type="button" data-contact-back data-i18n="contact.back_btn">← Back to choices</button>
+            <span class="mono" data-i18n="contact.consultation_label">01 / Focused advice</span>
+            <h3 id="consultationTitle" tabindex="-1" data-i18n="contact.consultation_title">Need an expert perspective?</h3>
+            <p data-i18n="contact.consultation_desc">Book a focused consultation for cloud architecture, Azure, or your next technical decision.</p>
+            <p class="ct-price" data-i18n="contact.consultation_price">GHS 500 <span>· one-time fee</span></p>
+            <a class="btn" href="https://paystack.shop/pay/40f1e5uao4" target="_blank" rel="noopener noreferrer" data-i18n="contact.payment_btn"><b>↗</b>Book a consultation</a>
+            <p class="ct-next-step" data-i18n="contact.consultation_next">Pay securely through Paystack. I’ll follow up using your checkout details to arrange a time.</p>
+        </section>
+        <section class="ct-path ct-path--inquiry" id="messagePanel" data-contact-panel hidden aria-labelledby="messageTitle">
+            <button class="ct-back" type="button" data-contact-back data-i18n="contact.back_btn">← Back to choices</button>
+            <span class="mono" data-i18n="contact.project_label">02 / Build together</span>
+            <h3 id="messageTitle" tabindex="-1" data-i18n="contact.project_title">Have a project in mind?</h3>
+            <p data-i18n="contact.project_desc">Tell me what you’re working on. I’ll get back to you to discuss the right next step.</p>
+            <form id="f" novalidate>
+              <label><span class="mono" data-i18n="contact.name_label">Name</span><input id="n" name="name" required></label>
+              <label><span class="mono" data-i18n="contact.email_label">Email</span><input id="e" name="email" type="email" required></label>
+              <label>
+                <span class="mono" data-i18n="contact.need_label">Project type</span>
+                <select id="t" name="interest">
+                  <option data-i18n="contact.opt_product">Product engineering</option>
+                  <option data-i18n="contact.opt_cloud">Cloud architecture</option>
+                  <option data-i18n="contact.opt_training">Training &amp; adoption</option>
+                  <option data-i18n="contact.opt_other">Something else</option>
+                </select>
+              </label>
+              <label><span class="mono" data-i18n="contact.msg_label">A little about the project</span><textarea id="m" name="message" rows="5" required></textarea></label>
+              <div class="form-status" id="fs" aria-live="polite" hidden></div>
+              <button class="btn" id="fsb" type="submit" data-i18n="contact.submit_btn"><b>↗</b>Send message</button>
+            </form>
+        </section>
       </div>
     </div>
   </main>
